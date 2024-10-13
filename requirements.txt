@@ -20,10 +20,10 @@ requests-file
 google-search-results
 streamlit
 matplotlib
-datasets
-transformers
-peft
-torchtext
-scikit-learn
-xlrd
-openpyxl
+# datasets
+# transformers
+# peft
+# torchtext
+# scikit-learn
+# xlrd
+# openpyxl
