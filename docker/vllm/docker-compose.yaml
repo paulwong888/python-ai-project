@@ -2,11 +2,16 @@ services:
   vllm:
     container_name: vllm
     restart: no
-    image: vllm/vllm-openai:v0.6.1
+    image: vllm/vllm-openai:latest
     ipc: host
+    privileged: true
+    environment:
+      - HF_ENDPOINT=https://hf-mirror.com
+      - VLLM_TARGET_DEVICE=cuda
+      - LD_LIBRARY_PATH=/usr/lib64
     volumes:
-      - ./models:/models
-    command: ["--model", "/models/Qwen2.5-7B-Instruct",  "--served-model-name", "qwen2.5-7b-instruct",  "--gpu-memory-utilization", "0.90"]
+      - /home/paul/.cache/huggingface/models:/models
+    command: ["--model", "/models/models--unsloth--llama-3-8b-Instruct-lawdata",  "--served-model-name", "llama3-law-8b-instruct",  "--gpu-memory-utilization", "0.90"]
     ports:
       - 8000:8000
     deploy:
