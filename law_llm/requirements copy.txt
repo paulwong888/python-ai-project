@@ -1,0 +1,8 @@
+python-dotenv
+transformers
+datasets
+tokenizers
+torch
+accelerate
+modelscope
+gradio
