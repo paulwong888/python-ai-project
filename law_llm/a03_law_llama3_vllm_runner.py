@@ -13,6 +13,8 @@ class LawLlama3VllmRunner():
             model_path, 
             quantization="bitsandbytes", 
             load_format="bitsandbytes",
+            # quantization="gguf", #should provide a gguf file
+            # load_format="gguf",  #should provide a gguf file
             max_model_len=1024,
         )
 
