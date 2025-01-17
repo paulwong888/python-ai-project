@@ -1,6 +1,7 @@
 import json, requests
 import gradio as gr
 from a00_constant import LLAMA3_LAW_VLLM_ID
+from a04_vllm_client import VllmClient
 from openai import OpenAI
 
 # 模拟的大模型推理函数
@@ -34,51 +35,15 @@ def http_bot(prompt):
             yield output
 
 
-# Modify OpenAI's API key and API base to use vLLM's API server.
-openai_api_key = "EMPTY"
-openai_api_base = "http://192.168.0.106:8080/v1"
-
-client = OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key=openai_api_key,
-    base_url=openai_api_base,
-)
-
-# models = client.models.list()
-# model = models.data[0].id
-model = LLAMA3_LAW_VLLM_ID
-
-def http_by_openai(message: str):
-
-    # Completion API
-    stream = True
-    completion = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": "You are an assistant who provides precise and direct answers in Chinese "},
-            {"role": "user", "content": message}
-        ],
-        stream=stream
-    )
-
-    chunk_message = ""
-    if stream:
-        for chunk in completion:
-            print(type(chunk.choices[0]))
-            print(chunk.choices[0])
-            chunk_message += chunk.choices[0].delta.content
-            yield chunk_message
-    else:
-        print(completion)
-
 # 创建 Gradio 界面
 with gr.Blocks() as demo:
     message = """甲公司与乙公司签订了合同，其中包含件战条款，并选定了中国仲栽协会作为仲裁机构。
         当纠纷发生后，甲公司请求伸裁解决， 但乙公司却表示仲帮协议无效，认为纠纷超出了法律规定的仲裁范围。
         这种情况下，仲裁协议是否有效?
     """
+    vllm_client = VllmClient()
     iface = gr.Interface(
-        fn=http_by_openai,
+        fn=vllm_client.completions,
         inputs=gr.Textbox(lines=2, placeholder="请输入您的法律问题", value=message.strip()),
         outputs=gr.Textbox(lines=2, placeholder="答案将逐字显示在这里..."),
         title="法律咨询 - Present By Paul",
