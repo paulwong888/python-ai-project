@@ -22,12 +22,16 @@
     # --quantization gptq \
     # --dtype auto \
     # --cpu-offload-gb 5 \
+    # --quantization bitsandbytes \
+
 
 nohup \
 vllm serve /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata \
+    --port 8080 \
     --gpu-memory-utilization 0.7 \
     --served-model-name llama-3-8b-Instruct-lawdata \
     --max_model_len 1072 \
-    --quantization qqq \
+    --quantization bitsandbytes \
+    --load_format bitsandbytes \
 < /dev/null >> vllm-output.log 2>&1 &
-# tail -f output.log
+tail -f vllm-output.log

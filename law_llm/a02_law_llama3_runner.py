@@ -68,4 +68,5 @@ if __name__ == "__main__":
       当纠纷发生后，甲公司请求伸裁解决， 但乙公司却表示仲帮协议无效，认为纠纷超出了法律规定的仲裁范围。
       这种情况下，仲裁协议是否有效?
       """
-    print(llama3_runner.generate(message))
+    for text in llama3_runner.generate(message):
+        print(text, end="")

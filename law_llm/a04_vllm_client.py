@@ -1,9 +1,9 @@
 import datetime
 from openai import OpenAI
-from a00_constant import LLAMA3_LAW_PATH
+from a00_constant import LLAMA3_LAW_VLLM_ID
 
 open_ai = OpenAI(
-    base_url="http://localhost:8000/v1",
+    base_url="http://localhost:8080/v1",
     api_key="123"
 )
 
@@ -14,8 +14,9 @@ messages="""
 """
 print(datetime.datetime.now())
 response = open_ai.chat.completions.create(
-    model=LLAMA3_LAW_PATH,
+    model=LLAMA3_LAW_VLLM_ID,
     messages=[
+        {"role": "system", "content": "You are an assistant who provides precise and direct answers in Chinese "},
         {"role": "user", "content": messages}
     ]
 )

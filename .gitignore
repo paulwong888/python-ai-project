@@ -6,4 +6,6 @@ test-python/langchain/my_config.py
 __pycache__
 salary.csv
 salary.xlsx
-law_llm/vllm-output.log
+vllm-output.log
+nohup.out
+models
