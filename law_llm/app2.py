@@ -18,7 +18,7 @@ def http_bot(prompt):
         "model": LLAMA3_LAW_VLLM_ID,
         "prompt": prompt,
         "stream": True,
-        "max_tokens": 128,
+        "max_tokens": 2048,
     }
     response = requests.post("http://192.168.0.106:8080/v1/completions",
                              headers=headers,
