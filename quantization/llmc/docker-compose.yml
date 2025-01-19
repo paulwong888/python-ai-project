@@ -1,0 +1,20 @@
+services:
+  my-service:
+    image: registry.cn-hangzhou.aliyuncs.com/yongyang/llmcompression:pure-latest
+    container_name: llmc
+    ipc: host  # 使用主机的 IPC 命名空间
+    volumes:
+      - /home/paul/paulwong/work/workspaces/llmc:/llmc
+      - /home/paul/.cache/huggingface/models:/models
+    environment:
+      - HF_ENDPOINT=https://hf-mirror.com
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    entrypoint: ["/bin/bash", "-l", "-c"]
+    # command: ["tail", "-f", "/dev/null"]
+    stdin_open: true  # 相当于 -i
+    tty: true         # 相当于 -t
+    command: /bin/bash
