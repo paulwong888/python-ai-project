@@ -6,6 +6,7 @@ services:
     volumes:
       - /home/paul/paulwong/work/workspaces/llmc:/llmc
       - /home/paul/.cache/huggingface/models:/models
+      - ./02_run_command.sh:/usr/local/bin/02_run_command.sh
     environment:
       - HF_ENDPOINT=https://hf-mirror.com
     deploy:
