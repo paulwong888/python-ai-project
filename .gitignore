@@ -9,3 +9,6 @@ salary.xlsx
 vllm-output.log
 nohup.out
 models
+access.log
+error.log
+data
