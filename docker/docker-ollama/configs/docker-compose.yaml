@@ -1,5 +1,24 @@
 services:
 
+  # ollama:
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: all
+  #             capabilities:
+  #               - gpu  #使用GPU加速
+  #   volumes:
+  #     - ollama-volume:/root/.ollama #配置OLLAMA的配置数据文件在宿主机
+  #     - /etc/localtime:/etc/localtime:ro
+  #   container_name: ollama
+  #   image: ollama/ollama
+  #   restart: unless-stopped
+  #   networks:
+  #     - isolated #使用DOCKER的隔离网络
+  #     - internet
+
   vllm:
     container_name: vllm
     image: vllm/vllm-openai:latest
@@ -26,6 +45,7 @@ services:
     networks:
       - isolated #使用DOCKER的隔离网络
 
+  # https://github.com/open-webui/open-webui
   open-webui: #全局维一的服务名
     volumes:
       - open-webui-volume:/app/backend/data #配置open-webui的配置数据文件在宿主机
@@ -38,7 +58,9 @@ services:
       - "3000:3000"
     environment:
       # - OLLAMA_BASE_URL=http://ollama:11434 #OPEN-WEBUI访问OLLAMA的地址，其实就是服务名代替IP
-      - VLLM_API_URL=http://vllm:8000 #OPEN-WEBUI访问OLLAMA的地址，其实就是服务名代替IP
+      - ENABLE_OLLAMA_API=False
+      - OPENAI_API_BASE_URL=http://vllm:8000 /v1
+      - /etc/localtime:/etc/localtime:ro
       - LOG_LEVEL=DEBUG
     depends_on:
       # - ollama
