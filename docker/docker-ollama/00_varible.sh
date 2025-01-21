@@ -17,4 +17,5 @@ export DOCKER_ROOT_DIR=/home/paul/paulwong/work/workspaces/python-ai-project/doc
 export NGINX_DATA_DIR=${DOCKER_ROOT_DIR}/docker-nginx/data
 export OLLAMA_DATA_DIR=${DOCKER_ROOT_DIR}/docker-ollama/data
 export OPEN_WEBUI_DATA_DIR=${DOCKER_ROOT_DIR}/docker-webui/data
-export HUGGINGFACE_MODELS_DIR=/home/paul/.cache/huggingface/models
+export HUGGINGFACE_MODELS_DIR=/home/paul/.cache/huggingface/hub
+export MY_MODELS_DIR=/home/paul/.cache/huggingface/models
