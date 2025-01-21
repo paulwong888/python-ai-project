@@ -11,5 +11,6 @@ cd $SCRIPT_DIR
 
 source ./00_varible.sh
 
-docker compose -f configs/docker-compose.yaml restart nginx-webui
+docker compose -f configs/docker-compose.yaml stop nginx-webui
+docker compose -f configs/docker-compose.yaml start nginx-webui
 # echo ${DOCKER_ROOT_DIR}
