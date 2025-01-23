@@ -7,7 +7,7 @@ class VllmClient():
         # self.model_name = LLAMA3_LAW_VLLM_ID
         self.open_ai = OpenAI(
             base_url=VLLM_COMPLETIONS_URL,
-            api_key="123"
+            api_key="sk-fastgpt"
         )
         self.model_name = models = self.open_ai.models.list().data[0].id
 
