@@ -13,4 +13,6 @@ source ./00_varible.sh
 
 docker compose -f configs/docker-compose.yaml down
 
-docker compose -f configs/docker-compose.yaml up
+docker compose -f configs/docker-compose.yaml up -d
+
+docker compose -f configs/docker-compose.yaml logs -f

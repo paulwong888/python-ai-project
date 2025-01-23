@@ -9,10 +9,9 @@ SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 echo "当前脚本所在的目录是: $SCRIPT_DIR"
 cd $SCRIPT_DIR
 
-source ./00_varible.sh
+source ../00_varible.sh
 
-SERVICE_NAME=vllm
-docker compose -f configs/docker-compose.yaml down ${SERVICE_NAME}
-docker compose -f configs/docker-compose.yaml up -d ${SERVICE_NAME}
-docker compose logs -f ${SERVICE_NAME}
+docker compose down mysql
+docker compose up -d mysql
+docker compose logs mysql
 # echo ${DOCKER_ROOT_DIR}

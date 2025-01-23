@@ -12,7 +12,5 @@ cd $SCRIPT_DIR
 source ./00_varible.sh
 
 SERVICE_NAME=vllm
-docker compose -f configs/docker-compose.yaml down ${SERVICE_NAME}
-docker compose -f configs/docker-compose.yaml up -d ${SERVICE_NAME}
 docker compose logs -f ${SERVICE_NAME}
 # echo ${DOCKER_ROOT_DIR}
