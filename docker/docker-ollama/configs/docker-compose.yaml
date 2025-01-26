@@ -1,0 +1,121 @@
+services:
+
+  # ollama:
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: all
+  #             capabilities:
+  #               - gpu  #使用GPU加速
+  #   volumes:
+  #     - ollama-volume:/root/.ollama #配置OLLAMA的配置数据文件在宿主机
+  #     - /etc/localtime:/etc/localtime:ro
+  #   container_name: ollama
+  #   image: ollama/ollama
+  #   restart: unless-stopped
+  #   networks:
+  #     - isolated #使用DOCKER的隔离网络
+  #     - internet
+
+
+      # --model /huggingface-models/models--unsloth--Meta-Llama-3.1-8B-Instruct/snapshots/da09a334d51a646967eec17cb412575702b3d767
+      # --served-model-name unsloth--Meta-Llama-3.1-8B-Instruct
+
+      # --model /huggingface-models/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-7B/snapshots/4e5485ed9bc7191a570b78c3bf4b9b252ca63793
+      # --served-model-name deepseek-ai--DeepSeek-R1-Distill-Qwen-7B
+
+  vllm:
+    container_name: vllm
+    image: vllm/vllm-openai:latest
+    # ipc: host
+    volumes:
+      - ${HUGGINGFACE_MODELS_DIR}:/huggingface-models
+      - ${MY_MODELS_DIR}:/my-models
+      - /etc/localtime:/etc/localtime:ro
+    command: >
+      --model /my-models/models--unsloth--llama-3-8b-Instruct-lawdata
+      --served-model-name llama-3-8b-Instruct-lawdata
+      --gpu-memory-utilization 0.90
+      --max_model_len 1072
+      --quantization bitsandbytes
+      --load_format bitsandbytes
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    networks:
+      - isolated #使用DOCKER的隔离网络
+      - internet
+
+  # https://github.com/open-webui/open-webui
+  open-webui: #全局维一的服务名
+    volumes:
+      - open-webui-volume:/app/backend/data #配置open-webui的配置数据文件在宿主机
+      - /etc/localtime:/etc/localtime:ro
+    container_name: open-webui
+    restart: unless-stopped
+    image: ghcr.io/open-webui/open-webui:main
+    # network_mode: host
+    ports:
+      - "3000:3000"
+    environment:
+      # - OLLAMA_BASE_URL=http://ollama:11434 #OPEN-WEBUI访问OLLAMA的地址，其实就是服务名代替IP
+      - ENABLE_OLLAMA_API=False
+      - OPENAI_API_BASE_URL=http://vllm:8000 /v1
+      - /etc/localtime:/etc/localtime:ro
+      - LOG_LEVEL=DEBUG
+    depends_on:
+      # - ollama
+      - vllm
+    networks:
+      - isolated
+
+  nginx-webui:
+    volumes:
+      - ${NGINX_DATA_DIR}/html:/usr/share/nginx/html:ro
+      - ${NGINX_DATA_DIR}/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${NGINX_DATA_DIR}/conf/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${NGINX_DATA_DIR}/conf/.htpasswd:/etc/nginx/.htpasswd:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ${NGINX_DATA_DIR}/log/access.log:/var/log/nginx/access.log
+      - ${NGINX_DATA_DIR}/log/error.log:/var/log/nginx/error.log
+    container_name: nginx-webui
+    ports:
+      - "81:81"
+    image: nginx:latest
+    #image: quay.io/ricardbejarano/nginx
+    depends_on:
+      - open-webui
+    restart: unless-stopped
+    networks:
+      - isolated
+      - internet
+
+volumes:
+  ollama-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${OLLAMA_DATA_DIR}
+  open-webui-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${OPEN_WEBUI_DATA_DIR}
+
+networks:
+  isolated:
+    driver: bridge
+    internal: true
+  internet:
+    driver: bridge
+    name: internet

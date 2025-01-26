@@ -11,3 +11,7 @@ nohup.out
 models
 saves
 fine-turnning/llamafactory/output
+access.log
+error.log
+data
+

@@ -1,0 +1,105 @@
+# 数据库的默认账号和密码仅首次运行时设置有效
+# 如果修改了账号密码，记得改数据库和项目连接参数，别只改一处~
+# 该配置文件只是给快速启动，测试使用。正式使用，记得务必修改账号密码，以及调整合适的知识库参数，共享内存等。
+
+services:
+  
+  mysql:
+    image: mysql:8.0.36
+    container_name: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    networks:
+      - isolated
+    # command: --default-authentication-plugin=mysql_native_password
+    environment:
+      # 默认root密码，仅首次运行有效
+      MYSQL_ROOT_PASSWORD: oneapimmysql
+      MYSQL_DATABASE: oneapi
+      MYSQL_USER: oneapi
+      MYSQL_PASSWORD: oneapipassword
+    volumes:
+      - ../../data/mysql:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
+
+  one-api:
+    container_name: one-api
+    image: ghcr.io/songquanpeng/one-api:v0.6.10
+    ports:
+      - 3000:3000
+    depends_on:
+      - mysql
+    restart: always
+    environment:
+      - TIKTOKEN_CACHE_DIR=/data
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_NAME=oneapi
+      - DB_USER=oneapi
+      - DB_PASSWORD=oneapipassword
+      # mysql 连接参数
+      # - SQL_DSN=root:oneapimmysql@tcp(mysql:3306)/oneapi
+      # 登录凭证加密密钥
+      - SESSION_SECRET=oneapikey
+      # 内存缓存
+      - MEMORY_CACHE_ENABLED=true
+      # 启动聚合更新，减少数据交互频率
+      - BATCH_UPDATE_ENABLED=true
+      # 聚合更新时长
+      - BATCH_UPDATE_INTERVAL=10
+      # 初始化的 root 密钥（建议部署完后更改，否则容易泄露）
+      - INITIAL_ROOT_TOKEN=fastgpt
+    volumes:
+      - ../../data/one-api:/data
+    networks:
+      - isolated
+      - internet
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+  # reranker:
+  #   container_name: reranker
+  #   image: harryliu888/bge-reranker-base:latest
+  #   ports:
+  #     - 6006:6006
+  #   depends_on:
+  #     - fastgpt
+  #   networks:
+  #     - isolated
+  #   restart: always
+  #   environment:
+  #     - ACCESS_TOKEN=ACCESS_TOKEN
+      # - ${NGINX_DATA_DIR}/log:/var/log/nginx
+
+      # - ${NGINX_DATA_DIR}/conf/conf.d:/etc/nginx/conf.d:ro
+  nginx-one-api:
+    volumes:
+      - ${NGINX_DATA_DIR}/html:/usr/share/nginx/html:ro
+      - ${NGINX_DATA_DIR}/conf/nginx-one-api.conf:/etc/nginx/nginx.conf:ro
+      - ${NGINX_DATA_DIR}/conf/conf.d/one-api.conf:/etc/nginx/conf.d/one-api.conf:ro
+      - ${NGINX_DATA_DIR}/conf/.htpasswd:/etc/nginx/.htpasswd:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ${NGINX_DATA_DIR}/log/access-one-api.log:/var/log/nginx/access-one-api.log
+      - ${NGINX_DATA_DIR}/log/error-one-api.log:/var/log/nginx/error-one-api.log
+    container_name: nginx-one-api
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "82:82"
+    image: nginx:latest
+    #image: quay.io/ricardbejarano/nginx
+    depends_on:
+      - one-api
+      # - fastgpt
+    restart: unless-stopped
+    networks:
+      - isolated
+      - internet
+
+networks:
+  isolated:
+    driver: bridge
+    internal: true
+  internet:
+    driver: bridge
+    name: internet
