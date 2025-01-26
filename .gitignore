@@ -9,3 +9,5 @@ salary.xlsx
 vllm-output.log
 nohup.out
 models
+saves
+fine-turnning/llamafactory/output

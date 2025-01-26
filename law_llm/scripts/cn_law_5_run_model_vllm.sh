@@ -26,7 +26,8 @@
 
 
 nohup \
-vllm serve /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata \
+# vllm serve /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata \
+vllm serve /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata-awq_w_only \
     --port 8080 \
     --gpu-memory-utilization 0.7 \
     --served-model-name llama-3-8b-Instruct-lawdata \
