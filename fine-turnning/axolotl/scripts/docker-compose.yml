@@ -1,0 +1,28 @@
+services:
+  axolotl:
+    image: axolotlai/axolotl:main-20250126-py3.11-cu124-2.5.1
+    container_name: axolotl
+    volumes:
+      - /home/paul/.cache/huggingface:/root/.cache/huggingface
+      - ../ms_cache:/root/.cache/modelscope
+      - ../om_cache:/root/.cache/openmind
+      - ../configs:/app/configs
+      - ../output:/app/output
+      - ../saves:/app/saves
+      - /etc/localtime:/etc/localtime:ro
+    # ports:
+    #   - "7861:7860"
+    #   - "8000:8000"
+    ipc: host
+    tty: true
+    shm_size: '16gb'
+    stdin_open: true
+    command: bash
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: "all"
+            capabilities: [gpu]
+    restart: unless-stopped

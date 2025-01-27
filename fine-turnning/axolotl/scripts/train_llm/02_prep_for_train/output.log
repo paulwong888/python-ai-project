@@ -1,0 +1,329 @@
+[2025-01-13 09:10:50,008] [INFO] [numexpr.utils._init_num_threads:149] [PID:886145] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[2025-01-13 09:10:50,008] [INFO] [numexpr.utils._init_num_threads:162] [PID:886145] NumExpr defaulting to 16 threads.
+[2025-01-13 09:10:50,260] [INFO] [datasets.<module>:54] [PID:886145] PyTorch version 2.5.1+cu124 available.
+[2025-01-13 09:10:51,042] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-01-13 09:10:51,108] [INFO] [root.spawn:60] [PID:886145] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpl906oza4/test.c -o /tmp/tmpl906oza4/test.o
+[2025-01-13 09:10:51,202] [INFO] [root.spawn:60] [PID:886145] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpl906oza4/test.o -laio -o /tmp/tmpl906oza4/a.out
+[2025-01-13 09:10:51,667] [INFO] [root.spawn:60] [PID:886145] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpx5z5gyop/test.c -o /tmp/tmpx5z5gyop/test.o
+[2025-01-13 09:10:51,677] [INFO] [root.spawn:60] [PID:886145] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpx5z5gyop/test.o -L/usr -L/usr/lib64 -lcufile -o /tmp/tmpx5z5gyop/a.out
+/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/monkeypatch/relora.py:16: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import ZeroRedundancyOptimizer
+/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/_internal/_fields.py:151: UserWarning: Field "model_kwargs" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+
+     #@@ #@@      @@# @@#
+    @@  @@          @@  @@           =@@#                               @@                 #@    =@@#.
+    @@    #@@@@@@@@@    @@           #@#@=                              @@                 #@     .=@@
+      #@@@@@@@@@@@@@@@@@            =@# @#     ##=     ##    =####=+    @@      =#####+  =#@@###.   @@
+    @@@@@@@@@@/  +@@/  +@@          #@  =@=     #@=   @@   =@#+  +#@#   @@    =@#+  +#@#   #@.      @@
+    @@@@@@@@@@  ##@@  ##@@         =@#   @#      =@# @#    @@      @@   @@    @@      #@   #@       @@
+     @@@@@@@@@@@@@@@@@@@@          #@=+++#@=      =@@#     @@      @@   @@    @@      #@   #@       @@
+                                  =@#=====@@     =@# @#    @@      @@   @@    @@      #@   #@       @@
+    @@@@@@@@@@@@@@@@  @@@@        #@      #@=   #@=  +@@   #@#    =@#   @@.   =@#    =@#   #@.      @@
+                                 =@#       @#  #@=     #@   =#@@@@#=    +#@@=  +#@@@@#=    .##@@+   @@
+    @@@@  @@@@@@@@@@@@@@@@
+
+[2025-01-13 09:10:52,997] [INFO] [axolotl.utils.config.models.input.check_eval_packing:1156] [PID:886145] [RANK:0] explicitly setting `eval_sample_packing` to match `sample_packing`[39m
+[2025-01-13 09:10:53,358] [DEBUG] [axolotl.normalize_config:87] [PID:886145] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2025-01-13 09:10:53,362] [INFO] [axolotl.normalize_config:211] [PID:886145] [RANK:0] cuda memory usage baseline: 0.000GB (+0.461GB misc)[39m
+[2025-01-13 09:10:54,384] [INFO] [axolotl.common.cli.load_model_and_tokenizer:62] [PID:886145] [RANK:0] loading tokenizer... /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata/[39m
+[2025-01-13 09:10:54,739] [DEBUG] [axolotl.load_tokenizer:296] [PID:886145] [RANK:0] EOS: 128009 / <|eot_id|>[39m
+[2025-01-13 09:10:54,739] [DEBUG] [axolotl.load_tokenizer:297] [PID:886145] [RANK:0] BOS: 128000 / <|begin_of_text|>[39m
+[2025-01-13 09:10:54,739] [DEBUG] [axolotl.load_tokenizer:298] [PID:886145] [RANK:0] PAD: 128001 / <|end_of_text|>[39m
+[2025-01-13 09:10:54,739] [DEBUG] [axolotl.load_tokenizer:299] [PID:886145] [RANK:0] UNK: None / None[39m
+[2025-01-13 09:10:54,739] [INFO] [axolotl.load_tokenizer:313] [PID:886145] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2025-01-13 09:10:54,739] [INFO] [axolotl.common.cli.load_model_and_tokenizer:65] [PID:886145] [RANK:0] loading model and (optionally) peft_config...[39m
+[2025-01-13 09:10:54,745] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_forward_for_ga:201] [PID:886145] [RANK:0] patching forward[39m
+[2025-01-13 09:10:54,748] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_training_step_for_ga:145] [PID:886145] [RANK:0] patching training_step[39m
+[2025-01-13 09:10:54,932] [INFO] [httpx._send_single_request:1025] [PID:886145] HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-01-13 09:10:55,834] [INFO] [accelerate.utils.modeling.get_balanced_memory:1014] [PID:886145] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:05<00:17,  5.86s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:36<00:41, 20.60s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:51<00:17, 17.99s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:58<00:00, 13.61s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:58<00:00, 14.64s/it]
+[2025-01-13 09:11:54,828] [INFO] [axolotl.load_model:1077] [PID:886145] [RANK:0] cuda memory usage after model load: 5.312GB (+0.126GB cache, +0.640GB misc)[39m
+[2025-01-13 09:11:55,449] [INFO] [axolotl.prepare_model:997] [PID:886145] [RANK:0] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2025-01-13 09:11:55,451] [INFO] [axolotl.load_model:1110] [PID:886145] [RANK:0] Converting modules to torch.bfloat16[39m
+[2025-01-13 09:11:55,456] [INFO] [axolotl.load_lora:1299] [PID:886145] [RANK:0] found linear modules: ['down_proj', 'gate_proj', 'k_proj', 'o_proj', 'q_proj', 'up_proj', 'v_proj'][39m
+trainable params: 83,886,080 || all params: 8,114,147,328 || trainable%: 1.0338
+[2025-01-13 09:11:56,748] [INFO] [axolotl.load_model:1171] [PID:886145] [RANK:0] cuda memory usage after adapters: 5.640GB (+3.870GB cache, +0.640GB misc)[39m
+* Running on local URL:  http://0.0.0.0:7860
+[2025-01-13 09:11:57,763] [INFO] [httpx._send_single_request:1025] [PID:886145] HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+[2025-01-13 09:11:57,796] [INFO] [httpx._send_single_request:1025] [PID:886145] HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+[2025-01-13 09:11:58,242] [INFO] [httpx._send_single_request:1025] [PID:886145] HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2025-01-13 09:11:58,568] [INFO] [httpx._send_single_request:1025] [PID:886145] HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+
+Could not create share link. Missing file: /home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/gradio/frpc_linux_amd64_v0.3. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.3/frpc_linux_amd64
+2. Rename the downloaded file to: frpc_linux_amd64_v0.3
+3. Move the file to this location: /home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/gradio
+From v4.47 onwards, when a model cache is to be returned, `generate` will return a `Cache` instance instead by default (as opposed to the legacy tuple of tuples format). If you want to keep returning the legacy format, please set `return_legacy_cache=True`.
+[2025-01-13 09:41:55,612] [INFO] [numexpr.utils._init_num_threads:149] [PID:913155] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[2025-01-13 09:41:55,612] [INFO] [numexpr.utils._init_num_threads:162] [PID:913155] NumExpr defaulting to 16 threads.
+[2025-01-13 09:41:55,850] [INFO] [datasets.<module>:54] [PID:913155] PyTorch version 2.5.1+cu124 available.
+[2025-01-13 09:41:56,743] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-01-13 09:41:56,820] [INFO] [root.spawn:60] [PID:913155] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpujj3rxsa/test.c -o /tmp/tmpujj3rxsa/test.o
+[2025-01-13 09:41:56,909] [INFO] [root.spawn:60] [PID:913155] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpujj3rxsa/test.o -laio -o /tmp/tmpujj3rxsa/a.out
+[2025-01-13 09:41:57,382] [INFO] [root.spawn:60] [PID:913155] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmppwb_n6i7/test.c -o /tmp/tmppwb_n6i7/test.o
+[2025-01-13 09:41:57,391] [INFO] [root.spawn:60] [PID:913155] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmppwb_n6i7/test.o -L/usr -L/usr/lib64 -lcufile -o /tmp/tmppwb_n6i7/a.out
+/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/monkeypatch/relora.py:16: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import ZeroRedundancyOptimizer
+/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/_internal/_fields.py:151: UserWarning: Field "model_kwargs" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+
+     #@@ #@@      @@# @@#
+    @@  @@          @@  @@           =@@#                               @@                 #@    =@@#.
+    @@    #@@@@@@@@@    @@           #@#@=                              @@                 #@     .=@@
+      #@@@@@@@@@@@@@@@@@            =@# @#     ##=     ##    =####=+    @@      =#####+  =#@@###.   @@
+    @@@@@@@@@@/  +@@/  +@@          #@  =@=     #@=   @@   =@#+  +#@#   @@    =@#+  +#@#   #@.      @@
+    @@@@@@@@@@  ##@@  ##@@         =@#   @#      =@# @#    @@      @@   @@    @@      #@   #@       @@
+     @@@@@@@@@@@@@@@@@@@@          #@=+++#@=      =@@#     @@      @@   @@    @@      #@   #@       @@
+                                  =@#=====@@     =@# @#    @@      @@   @@    @@      #@   #@       @@
+    @@@@@@@@@@@@@@@@  @@@@        #@      #@=   #@=  +@@   #@#    =@#   @@.   =@#    =@#   #@.      @@
+                                 =@#       @#  #@=     #@   =#@@@@#=    +#@@=  +#@@@@#=    .##@@+   @@
+    @@@@  @@@@@@@@@@@@@@@@
+
+[2025-01-13 09:41:58,566] [INFO] [axolotl.utils.config.models.input.check_eval_packing:1156] [PID:913155] [RANK:0] explicitly setting `eval_sample_packing` to match `sample_packing`[39m
+Traceback (most recent call last):
+  File "/home/paul/miniconda3/envs/axolotl/bin/axolotl", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/cli/main.py", line 258, in main
+    cli()
+  File "/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/cli/main.py", line 138, in inference
+    do_cli(config=config, **kwargs)
+  File "/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/cli/inference.py", line 23, in do_cli
+    parsed_cfg = load_cfg(config, inference=True, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/cli/__init__.py", line 437, in load_cfg
+    cfg = validate_config(
+          ^^^^^^^^^^^^^^^^
+  File "/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/utils/config/__init__.py", line 257, in validate_config
+    AxolotlConfigWCapabilities(
+  File "/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/main.py", line 171, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for AxolotlConfigWCapabilities
+gradio_share
+  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='192.168.0.106', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.6/v/bool_parsing
+[2025-01-13 09:43:32,581] [INFO] [numexpr.utils._init_num_threads:149] [PID:914565] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[2025-01-13 09:43:32,581] [INFO] [numexpr.utils._init_num_threads:162] [PID:914565] NumExpr defaulting to 16 threads.
+[2025-01-13 09:43:32,835] [INFO] [datasets.<module>:54] [PID:914565] PyTorch version 2.5.1+cu124 available.
+[2025-01-13 09:43:33,793] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-01-13 09:43:33,873] [INFO] [root.spawn:60] [PID:914565] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpl6prhrq0/test.c -o /tmp/tmpl6prhrq0/test.o
+[2025-01-13 09:43:33,969] [INFO] [root.spawn:60] [PID:914565] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpl6prhrq0/test.o -laio -o /tmp/tmpl6prhrq0/a.out
+[2025-01-13 09:43:34,441] [INFO] [root.spawn:60] [PID:914565] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpc2iig0zi/test.c -o /tmp/tmpc2iig0zi/test.o
+[2025-01-13 09:43:34,450] [INFO] [root.spawn:60] [PID:914565] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpc2iig0zi/test.o -L/usr -L/usr/lib64 -lcufile -o /tmp/tmpc2iig0zi/a.out
+/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/monkeypatch/relora.py:16: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import ZeroRedundancyOptimizer
+/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/_internal/_fields.py:151: UserWarning: Field "model_kwargs" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+
+     #@@ #@@      @@# @@#
+    @@  @@          @@  @@           =@@#                               @@                 #@    =@@#.
+    @@    #@@@@@@@@@    @@           #@#@=                              @@                 #@     .=@@
+      #@@@@@@@@@@@@@@@@@            =@# @#     ##=     ##    =####=+    @@      =#####+  =#@@###.   @@
+    @@@@@@@@@@/  +@@/  +@@          #@  =@=     #@=   @@   =@#+  +#@#   @@    =@#+  +#@#   #@.      @@
+    @@@@@@@@@@  ##@@  ##@@         =@#   @#      =@# @#    @@      @@   @@    @@      #@   #@       @@
+     @@@@@@@@@@@@@@@@@@@@          #@=+++#@=      =@@#     @@      @@   @@    @@      #@   #@       @@
+                                  =@#=====@@     =@# @#    @@      @@   @@    @@      #@   #@       @@
+    @@@@@@@@@@@@@@@@  @@@@        #@      #@=   #@=  +@@   #@#    =@#   @@.   =@#    =@#   #@.      @@
+                                 =@#       @#  #@=     #@   =#@@@@#=    +#@@=  +#@@@@#=    .##@@+   @@
+    @@@@  @@@@@@@@@@@@@@@@
+
+[2025-01-13 09:43:35,781] [INFO] [axolotl.utils.config.models.input.check_eval_packing:1156] [PID:914565] [RANK:0] explicitly setting `eval_sample_packing` to match `sample_packing`[39m
+[2025-01-13 09:43:36,290] [DEBUG] [axolotl.normalize_config:87] [PID:914565] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2025-01-13 09:43:36,423] [INFO] [axolotl.normalize_config:211] [PID:914565] [RANK:0] cuda memory usage baseline: 0.000GB (+0.465GB misc)[39m
+[2025-01-13 09:43:37,488] [INFO] [axolotl.common.cli.load_model_and_tokenizer:62] [PID:914565] [RANK:0] loading tokenizer... /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata/[39m
+[2025-01-13 09:43:37,854] [DEBUG] [axolotl.load_tokenizer:296] [PID:914565] [RANK:0] EOS: 128009 / <|eot_id|>[39m
+[2025-01-13 09:43:37,854] [DEBUG] [axolotl.load_tokenizer:297] [PID:914565] [RANK:0] BOS: 128000 / <|begin_of_text|>[39m
+[2025-01-13 09:43:37,855] [DEBUG] [axolotl.load_tokenizer:298] [PID:914565] [RANK:0] PAD: 128001 / <|end_of_text|>[39m
+[2025-01-13 09:43:37,855] [DEBUG] [axolotl.load_tokenizer:299] [PID:914565] [RANK:0] UNK: None / None[39m
+[2025-01-13 09:43:37,855] [INFO] [axolotl.load_tokenizer:313] [PID:914565] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2025-01-13 09:43:37,855] [INFO] [axolotl.common.cli.load_model_and_tokenizer:65] [PID:914565] [RANK:0] loading model and (optionally) peft_config...[39m
+[2025-01-13 09:43:37,861] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_forward_for_ga:201] [PID:914565] [RANK:0] patching forward[39m
+[2025-01-13 09:43:37,864] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_training_step_for_ga:145] [PID:914565] [RANK:0] patching training_step[39m
+[2025-01-13 09:43:38,048] [INFO] [httpx._send_single_request:1025] [PID:914565] HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-01-13 09:43:39,376] [INFO] [accelerate.utils.modeling.get_balanced_memory:1014] [PID:914565] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:04<00:13,  4.42s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:29<00:33, 16.77s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:43<00:15, 15.32s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:50<00:00, 11.91s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:50<00:00, 12.53s/it]
+[2025-01-13 09:44:29,882] [INFO] [axolotl.load_model:1077] [PID:914565] [RANK:0] cuda memory usage after model load: 5.312GB (+0.126GB cache, +0.644GB misc)[39m
+[2025-01-13 09:44:30,549] [INFO] [axolotl.prepare_model:997] [PID:914565] [RANK:0] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2025-01-13 09:44:30,550] [INFO] [axolotl.load_model:1110] [PID:914565] [RANK:0] Converting modules to torch.bfloat16[39m
+[2025-01-13 09:44:30,555] [INFO] [axolotl.load_lora:1299] [PID:914565] [RANK:0] found linear modules: ['down_proj', 'gate_proj', 'k_proj', 'o_proj', 'q_proj', 'up_proj', 'v_proj'][39m
+trainable params: 83,886,080 || all params: 8,114,147,328 || trainable%: 1.0338
+[2025-01-13 09:44:31,991] [INFO] [axolotl.load_model:1171] [PID:914565] [RANK:0] cuda memory usage after adapters: 5.640GB (+3.870GB cache, +0.644GB misc)[39m
+ERROR:    could not bind on any address out of [('192.168.0.106', 7860)]
+[2025-01-13 09:44:33,489] [INFO] [httpx._send_single_request:1025] [PID:914565] HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+ERROR:    could not bind on any address out of [('192.168.0.106', 7861)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7862)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7863)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7864)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7865)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7866)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7867)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7868)]
+ERROR:    could not bind on any address out of [('192.168.0.106', 7869)]
+[2025-01-13 09:46:33,765] [INFO] [numexpr.utils._init_num_threads:149] [PID:917415] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[2025-01-13 09:46:33,765] [INFO] [numexpr.utils._init_num_threads:162] [PID:917415] NumExpr defaulting to 16 threads.
+[2025-01-13 09:46:34,032] [INFO] [datasets.<module>:54] [PID:917415] PyTorch version 2.5.1+cu124 available.
+[2025-01-13 09:46:35,111] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-01-13 09:46:35,217] [INFO] [root.spawn:60] [PID:917415] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpilct5452/test.c -o /tmp/tmpilct5452/test.o
+[2025-01-13 09:46:35,331] [INFO] [root.spawn:60] [PID:917415] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpilct5452/test.o -laio -o /tmp/tmpilct5452/a.out
+[2025-01-13 09:46:35,896] [INFO] [root.spawn:60] [PID:917415] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpjcfbuugx/test.c -o /tmp/tmpjcfbuugx/test.o
+[2025-01-13 09:46:35,911] [INFO] [root.spawn:60] [PID:917415] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpjcfbuugx/test.o -L/usr -L/usr/lib64 -lcufile -o /tmp/tmpjcfbuugx/a.out
+/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/monkeypatch/relora.py:16: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import ZeroRedundancyOptimizer
+/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/_internal/_fields.py:151: UserWarning: Field "model_kwargs" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+
+     #@@ #@@      @@# @@#
+    @@  @@          @@  @@           =@@#                               @@                 #@    =@@#.
+    @@    #@@@@@@@@@    @@           #@#@=                              @@                 #@     .=@@
+      #@@@@@@@@@@@@@@@@@            =@# @#     ##=     ##    =####=+    @@      =#####+  =#@@###.   @@
+    @@@@@@@@@@/  +@@/  +@@          #@  =@=     #@=   @@   =@#+  +#@#   @@    =@#+  +#@#   #@.      @@
+    @@@@@@@@@@  ##@@  ##@@         =@#   @#      =@# @#    @@      @@   @@    @@      #@   #@       @@
+     @@@@@@@@@@@@@@@@@@@@          #@=+++#@=      =@@#     @@      @@   @@    @@      #@   #@       @@
+                                  =@#=====@@     =@# @#    @@      @@   @@    @@      #@   #@       @@
+    @@@@@@@@@@@@@@@@  @@@@        #@      #@=   #@=  +@@   #@#    =@#   @@.   =@#    =@#   #@.      @@
+                                 =@#       @#  #@=     #@   =#@@@@#=    +#@@=  +#@@@@#=    .##@@+   @@
+    @@@@  @@@@@@@@@@@@@@@@
+
+[2025-01-13 09:46:37,531] [INFO] [axolotl.utils.config.models.input.check_eval_packing:1156] [PID:917415] [RANK:0] explicitly setting `eval_sample_packing` to match `sample_packing`[39m
+[2025-01-13 09:46:38,083] [DEBUG] [axolotl.normalize_config:87] [PID:917415] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2025-01-13 09:46:38,207] [INFO] [axolotl.normalize_config:211] [PID:917415] [RANK:0] cuda memory usage baseline: 0.000GB (+0.465GB misc)[39m
+[2025-01-13 09:46:39,275] [INFO] [axolotl.common.cli.load_model_and_tokenizer:62] [PID:917415] [RANK:0] loading tokenizer... /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata/[39m
+[2025-01-13 09:46:40,175] [DEBUG] [axolotl.load_tokenizer:296] [PID:917415] [RANK:0] EOS: 128009 / <|eot_id|>[39m
+[2025-01-13 09:46:40,176] [DEBUG] [axolotl.load_tokenizer:297] [PID:917415] [RANK:0] BOS: 128000 / <|begin_of_text|>[39m
+[2025-01-13 09:46:40,176] [DEBUG] [axolotl.load_tokenizer:298] [PID:917415] [RANK:0] PAD: 128001 / <|end_of_text|>[39m
+[2025-01-13 09:46:40,176] [DEBUG] [axolotl.load_tokenizer:299] [PID:917415] [RANK:0] UNK: None / None[39m
+[2025-01-13 09:46:40,176] [INFO] [axolotl.load_tokenizer:313] [PID:917415] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2025-01-13 09:46:40,176] [INFO] [axolotl.common.cli.load_model_and_tokenizer:65] [PID:917415] [RANK:0] loading model and (optionally) peft_config...[39m
+[2025-01-13 09:46:40,181] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_forward_for_ga:201] [PID:917415] [RANK:0] patching forward[39m
+[2025-01-13 09:46:40,184] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_training_step_for_ga:145] [PID:917415] [RANK:0] patching training_step[39m
+[2025-01-13 09:46:40,364] [INFO] [httpx._send_single_request:1025] [PID:917415] HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-01-13 09:46:41,676] [INFO] [accelerate.utils.modeling.get_balanced_memory:1014] [PID:917415] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:32<01:37, 32.49s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:10<01:11, 35.74s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:47<00:36, 36.13s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:59<00:00, 26.59s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:59<00:00, 29.76s/it]
+[2025-01-13 09:48:41,490] [INFO] [axolotl.load_model:1077] [PID:917415] [RANK:0] cuda memory usage after model load: 5.312GB (+0.126GB cache, +0.644GB misc)[39m
+[2025-01-13 09:48:41,819] [INFO] [axolotl.prepare_model:997] [PID:917415] [RANK:0] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2025-01-13 09:48:41,821] [INFO] [axolotl.load_model:1110] [PID:917415] [RANK:0] Converting modules to torch.bfloat16[39m
+[2025-01-13 09:48:41,828] [INFO] [axolotl.load_lora:1299] [PID:917415] [RANK:0] found linear modules: ['down_proj', 'gate_proj', 'k_proj', 'o_proj', 'q_proj', 'up_proj', 'v_proj'][39m
+trainable params: 83,886,080 || all params: 8,114,147,328 || trainable%: 1.0338
+[2025-01-13 09:48:43,700] [INFO] [axolotl.load_model:1171] [PID:917415] [RANK:0] cuda memory usage after adapters: 5.640GB (+3.870GB cache, +0.644GB misc)[39m
+* Running on local URL:  http://0.0.0.0:7860
+[2025-01-13 09:48:44,789] [INFO] [httpx._send_single_request:1025] [PID:917415] HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+[2025-01-13 09:48:44,816] [INFO] [httpx._send_single_request:1025] [PID:917415] HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+[2025-01-13 09:48:45,157] [INFO] [httpx._send_single_request:1025] [PID:917415] HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2025-01-13 09:48:45,588] [INFO] [httpx._send_single_request:1025] [PID:917415] HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+
+Could not create share link. Missing file: /home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/gradio/frpc_linux_amd64_v0.3. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.3/frpc_linux_amd64
+2. Rename the downloaded file to: frpc_linux_amd64_v0.3
+3. Move the file to this location: /home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/gradio
+From v4.47 onwards, when a model cache is to be returned, `generate` will return a `Cache` instance instead by default (as opposed to the legacy tuple of tuples format). If you want to keep returning the legacy format, please set `return_legacy_cache=True`.
+[2025-01-13 10:43:06,606] [INFO] [numexpr.utils._init_num_threads:149] [PID:966629] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[2025-01-13 10:43:06,606] [INFO] [numexpr.utils._init_num_threads:162] [PID:966629] NumExpr defaulting to 16 threads.
+[2025-01-13 10:43:06,859] [INFO] [datasets.<module>:54] [PID:966629] PyTorch version 2.5.1+cu124 available.
+[2025-01-13 10:43:07,295] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-01-13 10:43:07,382] [INFO] [root.spawn:60] [PID:966629] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpy5fjrxwz/test.c -o /tmp/tmpy5fjrxwz/test.o
+[2025-01-13 10:43:07,485] [INFO] [root.spawn:60] [PID:966629] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpy5fjrxwz/test.o -laio -o /tmp/tmpy5fjrxwz/a.out
+[2025-01-13 10:43:07,944] [INFO] [root.spawn:60] [PID:966629] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpruhjf5rr/test.c -o /tmp/tmpruhjf5rr/test.o
+[2025-01-13 10:43:07,954] [INFO] [root.spawn:60] [PID:966629] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpruhjf5rr/test.o -L/usr -L/usr/lib64 -lcufile -o /tmp/tmpruhjf5rr/a.out
+/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/monkeypatch/relora.py:16: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import ZeroRedundancyOptimizer
+/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/_internal/_fields.py:151: UserWarning: Field "model_kwargs" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+Usage: axolotl inference [OPTIONS] CONFIG
+Try 'axolotl inference --help' for help.
+
+Error: Got unexpected extra arguments (- Present By Paul)
+[2025-01-13 10:43:42,608] [INFO] [numexpr.utils._init_num_threads:149] [PID:967319] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[2025-01-13 10:43:42,609] [INFO] [numexpr.utils._init_num_threads:162] [PID:967319] NumExpr defaulting to 16 threads.
+[2025-01-13 10:43:42,773] [INFO] [datasets.<module>:54] [PID:967319] PyTorch version 2.5.1+cu124 available.
+[2025-01-13 10:43:43,289] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-01-13 10:43:43,324] [INFO] [root.spawn:60] [PID:967319] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmpaha8of5y/test.c -o /tmp/tmpaha8of5y/test.o
+[2025-01-13 10:43:43,343] [INFO] [root.spawn:60] [PID:967319] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmpaha8of5y/test.o -laio -o /tmp/tmpaha8of5y/a.out
+[2025-01-13 10:43:43,793] [INFO] [root.spawn:60] [PID:967319] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -O2 -isystem /home/paul/miniconda3/envs/axolotl/include -fPIC -c /tmp/tmprt2esn2z/test.c -o /tmp/tmprt2esn2z/test.o
+[2025-01-13 10:43:43,804] [INFO] [root.spawn:60] [PID:967319] gcc -pthread -B /home/paul/miniconda3/envs/axolotl/compiler_compat /tmp/tmprt2esn2z/test.o -L/usr -L/usr/lib64 -lcufile -o /tmp/tmprt2esn2z/a.out
+/home/paul/paulwong/work/workspaces/axolotl/src/axolotl/monkeypatch/relora.py:16: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import ZeroRedundancyOptimizer
+/home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/pydantic/_internal/_fields.py:151: UserWarning: Field "model_kwargs" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+
+     #@@ #@@      @@# @@#
+    @@  @@          @@  @@           =@@#                               @@                 #@    =@@#.
+    @@    #@@@@@@@@@    @@           #@#@=                              @@                 #@     .=@@
+      #@@@@@@@@@@@@@@@@@            =@# @#     ##=     ##    =####=+    @@      =#####+  =#@@###.   @@
+    @@@@@@@@@@/  +@@/  +@@          #@  =@=     #@=   @@   =@#+  +#@#   @@    =@#+  +#@#   #@.      @@
+    @@@@@@@@@@  ##@@  ##@@         =@#   @#      =@# @#    @@      @@   @@    @@      #@   #@       @@
+     @@@@@@@@@@@@@@@@@@@@          #@=+++#@=      =@@#     @@      @@   @@    @@      #@   #@       @@
+                                  =@#=====@@     =@# @#    @@      @@   @@    @@      #@   #@       @@
+    @@@@@@@@@@@@@@@@  @@@@        #@      #@=   #@=  +@@   #@#    =@#   @@.   =@#    =@#   #@.      @@
+                                 =@#       @#  #@=     #@   =#@@@@#=    +#@@=  +#@@@@#=    .##@@+   @@
+    @@@@  @@@@@@@@@@@@@@@@
+
+[2025-01-13 10:43:44,664] [INFO] [axolotl.utils.config.models.input.check_eval_packing:1156] [PID:967319] [RANK:0] explicitly setting `eval_sample_packing` to match `sample_packing`[39m
+[2025-01-13 10:43:45,177] [DEBUG] [axolotl.normalize_config:87] [PID:967319] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2025-01-13 10:43:45,188] [INFO] [axolotl.normalize_config:211] [PID:967319] [RANK:0] cuda memory usage baseline: 0.000GB (+0.514GB misc)[39m
+[2025-01-13 10:43:46,270] [INFO] [axolotl.common.cli.load_model_and_tokenizer:62] [PID:967319] [RANK:0] loading tokenizer... /home/paul/.cache/huggingface/models/models--unsloth--llama-3-8b-Instruct-lawdata/[39m
+[2025-01-13 10:43:46,630] [DEBUG] [axolotl.load_tokenizer:296] [PID:967319] [RANK:0] EOS: 128009 / <|eot_id|>[39m
+[2025-01-13 10:43:46,630] [DEBUG] [axolotl.load_tokenizer:297] [PID:967319] [RANK:0] BOS: 128000 / <|begin_of_text|>[39m
+[2025-01-13 10:43:46,631] [DEBUG] [axolotl.load_tokenizer:298] [PID:967319] [RANK:0] PAD: 128001 / <|end_of_text|>[39m
+[2025-01-13 10:43:46,631] [DEBUG] [axolotl.load_tokenizer:299] [PID:967319] [RANK:0] UNK: None / None[39m
+[2025-01-13 10:43:46,631] [INFO] [axolotl.load_tokenizer:313] [PID:967319] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2025-01-13 10:43:46,631] [INFO] [axolotl.common.cli.load_model_and_tokenizer:65] [PID:967319] [RANK:0] loading model and (optionally) peft_config...[39m
+[2025-01-13 10:43:46,638] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_forward_for_ga:201] [PID:967319] [RANK:0] patching forward[39m
+[2025-01-13 10:43:46,640] [INFO] [axolotl.monkeypatch.trainer_grad_accum.patch_training_step_for_ga:145] [PID:967319] [RANK:0] patching training_step[39m
+[2025-01-13 10:43:46,817] [INFO] [httpx._send_single_request:1025] [PID:967319] HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+[2025-01-13 10:43:48,131] [INFO] [accelerate.utils.modeling.get_balanced_memory:1014] [PID:967319] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:08<00:24,  8.32s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:27<00:29, 14.91s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:43<00:15, 15.39s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:52<00:00, 12.73s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:52<00:00, 13.12s/it]
+[2025-01-13 10:44:41,324] [INFO] [axolotl.load_model:1077] [PID:967319] [RANK:0] cuda memory usage after model load: 5.312GB (+0.126GB cache, +0.672GB misc)[39m
+[2025-01-13 10:44:42,006] [INFO] [axolotl.prepare_model:997] [PID:967319] [RANK:0] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2025-01-13 10:44:42,008] [INFO] [axolotl.load_model:1110] [PID:967319] [RANK:0] Converting modules to torch.bfloat16[39m
+[2025-01-13 10:44:42,016] [INFO] [axolotl.load_lora:1299] [PID:967319] [RANK:0] found linear modules: ['down_proj', 'gate_proj', 'k_proj', 'o_proj', 'q_proj', 'up_proj', 'v_proj'][39m
+trainable params: 83,886,080 || all params: 8,114,147,328 || trainable%: 1.0338
+[2025-01-13 10:44:43,585] [INFO] [axolotl.load_model:1171] [PID:967319] [RANK:0] cuda memory usage after adapters: 5.640GB (+3.870GB cache, +0.672GB misc)[39m
+* Running on local URL:  http://0.0.0.0:7860
+[2025-01-13 10:44:44,720] [INFO] [httpx._send_single_request:1025] [PID:967319] HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+[2025-01-13 10:44:44,743] [INFO] [httpx._send_single_request:1025] [PID:967319] HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+[2025-01-13 10:44:45,054] [INFO] [httpx._send_single_request:1025] [PID:967319] HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2025-01-13 10:44:45,516] [INFO] [httpx._send_single_request:1025] [PID:967319] HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+
+Could not create share link. Missing file: /home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/gradio/frpc_linux_amd64_v0.3. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.3/frpc_linux_amd64
+2. Rename the downloaded file to: frpc_linux_amd64_v0.3
+3. Move the file to this location: /home/paul/miniconda3/envs/axolotl/lib/python3.12/site-packages/gradio
+Using existing dataset file at: .gradio/flagged/dataset1.csv
+From v4.47 onwards, when a model cache is to be returned, `generate` will return a `Cache` instance instead by default (as opposed to the legacy tuple of tuples format). If you want to keep returning the legacy format, please set `return_legacy_cache=True`.
