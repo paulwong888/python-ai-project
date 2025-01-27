@@ -4,11 +4,8 @@ services:
     container_name: axolotl
     volumes:
       - /home/paul/.cache/huggingface:/root/.cache/huggingface
-      - ../ms_cache:/root/.cache/modelscope
-      - ../om_cache:/root/.cache/openmind
-      - ../configs:/app/configs
-      - ../output:/app/output
-      - ../saves:/app/saves
+      - ./configs:/app/configs
+      - ../data/output:/app/output
       - /etc/localtime:/etc/localtime:ro
     # ports:
     #   - "7861:7860"

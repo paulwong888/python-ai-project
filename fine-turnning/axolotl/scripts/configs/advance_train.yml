@@ -1,6 +1,6 @@
 # model params
 # base_model: /home/paul/.cache/huggingface/models/unsloth--Meta-Llama-3.1-8B-Instruct
-base_model: /home/paul/.cache/huggingface/hub/models--unsloth--Meta-Llama-3.1-8B-Instruct/snapshots/da09a334d51a646967eec17cb412575702b3d767
+base_model: /root/.cache/huggingface/hub/models--unsloth--Meta-Llama-3.1-8B-Instruct/snapshots/da09a334d51a646967eec17cb412575702b3d767
 model_type: LlamaForCausalLM
 tokenizer_type: PreTrainedTokenizerFast
 
@@ -15,7 +15,7 @@ datasets:
       format: "<|user|>\n {instruction} </s>\n<|assistant|>"
       no_input_format: "<|user|>\n {instruction} </s>\n<|assistant|>"
 
-output_dir: ./models/Llama3_Storyteller
+output_dir: /app/output/Llama3_Storyteller
 
 # model params
 sequence_length: 1024
