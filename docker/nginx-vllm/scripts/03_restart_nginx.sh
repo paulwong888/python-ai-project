@@ -11,8 +11,11 @@ cd $SCRIPT_DIR
 
 source ./00_varible.sh
 
-docker compose -f configs/docker-compose.yaml down
+# docker compose stop nginx-webui
+# docker compose start nginx-webui
+SERVICE_NAME=nginx-vllm
 
-docker compose -f configs/docker-compose.yaml up -d
-
-docker compose -f configs/docker-compose.yaml logs -f
+docker compose down ${SERVICE_NAME}
+docker compose up -d ${SERVICE_NAME}
+docker compose logs -f ${SERVICE_NAME}
+# echo ${DOCKER_ROOT_DIR}

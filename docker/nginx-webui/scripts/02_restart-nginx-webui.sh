@@ -11,6 +11,4 @@ cd $SCRIPT_DIR
 
 source ./00_varible.sh
 
-SERVICE_NAME=vllm
-docker compose logs -f ${SERVICE_NAME}
-# echo ${DOCKER_ROOT_DIR}
+docker compose restart
