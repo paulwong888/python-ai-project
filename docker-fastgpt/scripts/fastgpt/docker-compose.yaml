@@ -103,7 +103,7 @@ services:
       - 'host.docker.internal:host-gateway'
     networks:
       - isolated
-      - internet
+      # - internet
 
       # - ${NGINX_DATA_DIR}/fastgpt/conf/conf.d:/etc/nginx/conf.d:ro
   nginx-fastgpt:
