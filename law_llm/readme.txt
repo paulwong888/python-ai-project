@@ -27,5 +27,7 @@ source /etc/network_turbo
 unset http_proxy && unset https_proxy
 --------------------
 
+某拍卖企业在进行文物拍卖时，有观众提出质疑，认为拍卖师不具备合法资格。请问拍卖师应当具备哪些条件？
+
 #pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
 #pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/

@@ -13,6 +13,13 @@ saves
 fine-turnning/llamafactory/output
 access.log
 error.log
-data
+# data
 
 fine-turnning/axolotl/scripts/axolotl.tar
+webui.db
+
+docker-fastgpt/data/mongodb
+docker-fastgpt/data/mysql
+docker-fastgpt/data/pg
+fine-turnning/axolotl/data/output
+docker-fastgpt/data/one-api/logs

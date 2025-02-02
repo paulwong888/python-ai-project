@@ -26,6 +26,9 @@ services:
       # --model /huggingface-models/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-7B/snapshots/4e5485ed9bc7191a570b78c3bf4b9b252ca63793
       # --served-model-name deepseek-ai--DeepSeek-R1-Distill-Qwen-7B
 
+      # --model /huggingface-models/models--deepseek-ai--DeepSeek-R1-Distill-Llama-8B/snapshots/24ae87a9c340aa4207dd46509414c019998e0161
+      # --served-model-name deepseek-ai--DeepSeek-R1-Distill-Llama-8B
+
   vllm:
     container_name: vllm
     image: vllm/vllm-openai:latest

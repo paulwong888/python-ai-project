@@ -97,7 +97,7 @@ services:
       # pg 连接参数
       - PG_URL=postgresql://username:password@pg:5432/postgres
     volumes:
-      - ../../data/fastgpt/config.json:/app/data/config.json
+      # - ../../data/fastgpt/config.json:/app/data/config.json
       - ../../data/fastgpt/tmp:/app/tmp
     extra_hosts:
       - 'host.docker.internal:host-gateway'
@@ -105,16 +105,16 @@ services:
       - isolated
       - internet
 
-      # - ${NGINX_DATA_DIR}/conf/conf.d:/etc/nginx/conf.d:ro
+      # - ${NGINX_DATA_DIR}/fastgpt/conf/conf.d:/etc/nginx/conf.d:ro
   nginx-fastgpt:
     volumes:
-      - ${NGINX_DATA_DIR}/html:/usr/share/nginx/html:ro
-      - ${NGINX_DATA_DIR}/conf/nginx-fastgpt.conf:/etc/nginx/nginx.conf:ro
-      - ${NGINX_DATA_DIR}/conf/conf.d/fastgpt.conf:/etc/nginx/conf.d/fastgpt.conf:ro
-      - ${NGINX_DATA_DIR}/conf/.htpasswd:/etc/nginx/.htpasswd:ro
+      - ${NGINX_DATA_DIR}/fastgpt/html:/usr/share/nginx/html:ro
+      - ${NGINX_DATA_DIR}/fastgpt/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${NGINX_DATA_DIR}/fastgpt/conf/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${NGINX_DATA_DIR}/fastgpt/conf/.htpasswd:/etc/nginx/.htpasswd:ro
       - /etc/localtime:/etc/localtime:ro
-      - ${NGINX_DATA_DIR}/log/access_83_fastgpt.log:/var/log/nginx/access_83_fastgpt.log
-      - ${NGINX_DATA_DIR}/log/error_83_fastgpt.log:/var/log/nginx/error_83_fastgpt.log
+      - ${NGINX_DATA_DIR}/fastgpt/log/access.log:/var/log/nginx/access.log
+      - ${NGINX_DATA_DIR}/fastgpt/log/error.log:/var/log/nginx/error.log
     container_name: nginx-fastgpt
     ports:
       - "83:83"
