@@ -5,7 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # 将当前目录内容复制到位于 /app 的容器中
-COPY .py /app
+COPY a00_constant.py a02_law_llama3_runner.py app.py requirements.txt /app/
 
 # 安装所需的包
 RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/

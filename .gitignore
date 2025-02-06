@@ -23,3 +23,5 @@ docker-fastgpt/data/mysql
 docker-fastgpt/data/pg
 fine-turnning/axolotl/data/output
 docker-fastgpt/data/one-api/logs
+docker/nginx-webui/docker-data/webui/webui.db
+docker-fastgpt/data/one-api/one-api.db
