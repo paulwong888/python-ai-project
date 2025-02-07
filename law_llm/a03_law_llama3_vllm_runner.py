@@ -1,4 +1,4 @@
-from a00_constant import LLAMA3_LAW_PATH
+from a00_constant import LLAMA3_LAW_PATH, DEEPSEEK_32B_PATH
 from vllm import LLM, SamplingParams
 
 class LawLlama3VllmRunner():
@@ -8,7 +8,7 @@ class LawLlama3VllmRunner():
         self.sampling_params = self.build_sampling_params(self.model)
 
     def load_model(self):
-        model_path = LLAMA3_LAW_PATH
+        model_path = DEEPSEEK_32B_PATH
         return LLM(
             model_path, 
             quantization="bitsandbytes", 
@@ -16,6 +16,9 @@ class LawLlama3VllmRunner():
             # quantization="gguf", #should provide a gguf file
             # load_format="gguf",  #should provide a gguf file
             max_model_len=1024,
+            dtype="half",
+            gpu_memory_utilization=0.95,
+            tensor_parallel_size=2,
         )
 
     def build_sampling_params(self, model: LLM):

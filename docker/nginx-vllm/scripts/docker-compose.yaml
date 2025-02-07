@@ -41,11 +41,25 @@ services:
       - ${HUGGINGFACE_MODELS_DIR}:/huggingface-models
       - ${MY_MODELS_DIR}:/my-models
       - /etc/localtime:/etc/localtime:ro
+    environment:
+      - CUDA_VISIBLE_DEVICES=0,1
+    # - NCCL_DEBUG=INFO
+    #   - HTTP_PROXY=http://192.168.0.102:7890
+    #   - HTTPS_PROXY=http://192.168.0.102:7890
+    #   - NO_PROXY=localhost,127.0.0.1,.example.com
+      # --model /my-models/models--unsloth--llama-3-8b-Instruct-lawdata
+      # --served-model-name llama-3-8b-Instruct-lawdata
+      # --tensor-parallel-size 2
+      # --max-num-batched-tokens 4096
+    shm_size: 1g
     command: >
-      --model /my-models/models--unsloth--llama-3-8b-Instruct-lawdata
-      --served-model-name llama-3-8b-Instruct-lawdata
-      --gpu-memory-utilization 0.90
-      --max_model_len 1072
+      --model /my-models/DeepSeek-R1-Distill-Qwen-32B
+      --served-model-name DeepSeek-R1-Distill-Qwen-32B
+      --gpu-memory-utilization 0.95
+      --max-model-len 78080
+      --dtype half
+      --tensor-parallel-size 2
+      --device cuda
       --quantization bitsandbytes
       --load_format bitsandbytes
     ports:

@@ -11,5 +11,7 @@ cd $SCRIPT_DIR
 
 source ./00_varible.sh
 
-docker compose -f configs/docker-compose.yaml exec ollama /bin/bash
+SERVICE_NAME=vllm
+
+docker compose down ${SERVICE_NAME}
 # echo ${DOCKER_ROOT_DIR}
