@@ -11,5 +11,8 @@ cd $SCRIPT_DIR
 
 source ./00_varible.sh
 
-docker compose -f configs/docker-compose.yaml exec ollama /bin/bash
+cd configs
+
+docker compose exec nginx-webui /bin/bash
+# docker compose ls
 # echo ${DOCKER_ROOT_DIR}

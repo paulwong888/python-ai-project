@@ -25,3 +25,4 @@ fine-turnning/axolotl/data/output
 docker-fastgpt/data/one-api/logs
 docker/nginx-webui/docker-data/webui/webui.db
 docker-fastgpt/data/one-api/one-api.db
+12_autogen/01_test/sources/group_chat
