@@ -9,7 +9,7 @@ import wandb
 class MyTrainer:
     # PeftModelForCausallm
     def __init__(self):
-        wandb.login(key="aa9241b28fbdbef0477258f0d8a4f8d0f43df80a")
+        wandb.login(key=wandb_key)
         run = wandb.init(
             project='Fine-tune-DeepSeek-R1-Distill-Llama-8B on Medical COT Dataset', 
             job_type="training", 

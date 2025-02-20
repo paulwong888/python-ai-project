@@ -1,2 +1,3 @@
 unsloth
 wandb
+python-dotenv

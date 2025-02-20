@@ -1,5 +1,9 @@
-import torch
+import torch, os
 from unsloth import is_bfloat16_supported
+from dotenv import load_dotenv
+
+load_dotenv("/home/paul/paulwong/work/config")
+wandb_key=os.getenv("wandb_key")
 
 model_name: str="/home/paul/.cache/huggingface/models/unsloth--DeepSeek-R1-Distill-Llama-8B"
 dataset_name: str = "/home/paul/.cache/huggingface/hub/datasets--FreedomIntelligence--medical-o1-reasoning-SFT"
