@@ -9,8 +9,15 @@ class MyDataset():
         tokenizer = LlamaTokenizerFast.from_pretrained(model_name)
         self.EOS_TOKEN = tokenizer.eos_token  # Must add EOS_TOKEN
         self.dataset = load_dataset("json", "en", data_dir=dataset_name, split="train[0:500]")
-        self.dataset = self.dataset.map(lambda x: self.format_prompt(x), batched=True)
+        self.dataset = self.pre_process_data(self.dataset)
         print(type(self.dataset))
+
+    def pre_process_data(self, dataset):
+        return dataset.map(
+            lambda x: self.format_prompt(x),
+            batched = True,
+            remove_columns = ["instruction", "input", "output"]
+        )
 
     def format_prompt(self, samples):
         inputs = samples["Question"]
