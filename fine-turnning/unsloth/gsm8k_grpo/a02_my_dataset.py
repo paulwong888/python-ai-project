@@ -72,4 +72,5 @@ class MyDataset():
 if __name__ == "__main__":
     my_dataset = MyDataset()
     print(my_dataset.my_dataset)
-    print(my_dataset.my_dataset["train"][0:2])
+    # print(my_dataset.my_dataset["train"][0:2])
+    print(my_dataset.my_dataset["test"][0:2])

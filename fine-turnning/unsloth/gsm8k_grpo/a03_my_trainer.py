@@ -20,8 +20,8 @@ class MyTrainer():
         grpo_config = GRPOConfig(
             use_vllm = True, # use vLLM for fast inference!
             learning_rate = 5e-6,
-            adam_beta1 = 0.9,
-            adam_beta2 = 0.99,
+            # adam_beta1 = 0.9,
+            # adam_beta2 = 0.99,
             weight_decay = 0.1,
             warmup_ratio = 0.1,
             lr_scheduler_type = "cosine",
