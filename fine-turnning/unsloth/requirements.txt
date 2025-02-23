@@ -1,3 +1,4 @@
 unsloth
 wandb
 python-dotenv
+vllm
