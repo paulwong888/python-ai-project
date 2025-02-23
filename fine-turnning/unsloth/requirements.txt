@@ -2,3 +2,4 @@ unsloth
 wandb
 python-dotenv
 vllm
+deepspeed

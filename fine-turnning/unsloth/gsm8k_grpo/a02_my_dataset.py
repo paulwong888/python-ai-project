@@ -48,7 +48,7 @@ format to:
 class MyDataset():
     def __init__(self):
         self.my_dataset = load_dataset(
-            "parquet", "my_dataset", dataset_dir
+            path=dataset_dir
         )
         self.my_dataset = self.my_dataset.map(
             lambda x: self.format_prompt(x), remove_columns = ["question", "answer"]
@@ -71,4 +71,5 @@ class MyDataset():
 
 if __name__ == "__main__":
     my_dataset = MyDataset()
+    print(my_dataset.my_dataset)
     print(my_dataset.my_dataset["train"][0:2])
