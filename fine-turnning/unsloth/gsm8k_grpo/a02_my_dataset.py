@@ -50,8 +50,9 @@ class MyDataset():
         self.my_dataset = load_dataset(
             path=dataset_dir
         )
+            # remove_columns = ["question", "answer"]
         self.my_dataset = self.my_dataset.map(
-            lambda x: self.format_prompt(x), remove_columns = ["question", "answer"]
+            lambda x: self.format_prompt(x), 
         )
 
     def extract_hash_message(self, text: str) -> str | None:

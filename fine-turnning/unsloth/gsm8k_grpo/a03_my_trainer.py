@@ -35,8 +35,8 @@ class MyTrainer():
             max_prompt_length = 256,
             max_completion_length = 200,
             # num_train_epochs = 1, # Set to 1 for a full training run
-            max_steps = 250,
-            save_steps = 250,
+            max_steps = max_steps,
+            save_steps = max_steps,
             max_grad_norm = 0.1,
             report_to = report_to, # Can use Weights & Biases
             output_dir = output_dir,

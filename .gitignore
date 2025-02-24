@@ -29,3 +29,4 @@ docker-fastgpt/data/one-api/one-api.db
 unsloth_compiled_cache
 wandb
 /outputs
+fine-turnning/unsloth/gsm8k_grpo/outputs
