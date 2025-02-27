@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 load_dotenv("/home/paul/paulwong/work/config")
 wandb_key=os.getenv("wandb_key")
 
-model_name: str="/home/paul/.cache/huggingface/hub/models--unsloth--Meta-Llama-3.1-8B-Instruct/snapshots/da09a334d51a646967eec17cb412575702b3d767"
+# model_name: str="/home/paul/.cache/huggingface/hub/models--unsloth--Meta-Llama-3.1-8B-Instruct/snapshots/da09a334d51a646967eec17cb412575702b3d767"
+model_name: str="/home/paul/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/bb46c15ee4bb56c5b63245ef50fd7637234d6f75"
 dataset_dir: str = "/home/paul/.cache/huggingface/hub/datasets--openai--gsm8k/socratic"
 adapter_path: str = "/home/paul/paulwong/work/workspaces/python-ai-project/fine-turnning/unsloth/gsm8k_grpo/outputs/checkpoint-350"
 max_seq_length: int = 512

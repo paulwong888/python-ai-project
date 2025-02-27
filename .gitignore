@@ -10,23 +10,25 @@ vllm-output.log
 nohup.out
 models
 saves
-fine-turnning/llamafactory/output
+09_fine-turnning/llamafactory/output
 access.log
 error.log
 # data
 
-fine-turnning/axolotl/scripts/axolotl.tar
+09_fine-turnning/axolotl/scripts/axolotl.tar
 webui.db
 
-docker-fastgpt/data/mongodb
-docker-fastgpt/data/mysql
-docker-fastgpt/data/pg
-fine-turnning/axolotl/data/output
-docker-fastgpt/data/one-api/logs
-docker/nginx-webui/docker-data/webui/webui.db
-docker-fastgpt/data/one-api/one-api.db
+11_docker-fastgpt/data/mongodb
+11_docker-fastgpt/data/mysql
+11_docker-fastgpt/data/pg
+09_fine-turnning/axolotl/data/output
+11_docker-fastgpt/data/one-api/logs
+10_docker/nginx-webui/docker-data/webui/webui.db
+11_docker-fastgpt/data/one-api/
 12_autogen/01_test/sources/group_chat
 unsloth_compiled_cache
 wandb
 /outputs
-fine-turnning/unsloth/gsm8k_grpo/outputs
+09_fine-turnning/unsloth/gsm8k_grpo/outputs
+/.cache
+.gitignore
