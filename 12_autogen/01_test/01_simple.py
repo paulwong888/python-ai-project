@@ -1,4 +1,5 @@
 from autogen import AssistantAgent, UserProxyAgent, config_list_from_json
+from autogen_agentchat.agents import AssistantAgent
 
 llm_config = {"config_list": config_list_from_json("/home/paul/config/OAI_CONFIG_LIST")}
 
