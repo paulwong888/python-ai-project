@@ -1,3 +1,6 @@
 autogenstudio
 autogen
 langchain
+yfinance
+serpapi
+google-search-results

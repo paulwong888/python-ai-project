@@ -13,7 +13,7 @@ planer_agent = AssistantAgent(
     - Writer: For compiling final report
     Always send your plan first, then handoff to appropriate agent.
     Always handoff to a single agent at a time.
-    Use TERMINATE when research is complete.""",
+    Output TERMINATE when research is complete.""",
 )
 
 financial_analyst_agent = AssistantAgent(

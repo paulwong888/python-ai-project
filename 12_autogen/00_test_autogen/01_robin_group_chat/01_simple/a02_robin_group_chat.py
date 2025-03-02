@@ -12,8 +12,10 @@ async def round_robing_group_chat_main(task: str):
         [primary_agent, critic_agent],
         termination_condition = text_mention_termination
     )
-
-    await Console(team.run_stream(task=task))
+    # await Console(team.run_stream(task=task))
+    stream = team.run_stream(task=task)
+    async for message in stream:
+        print(message.content, end="")
 
 if __name__ == "__main__":
     # task = "Write a short poem about the fall season."
