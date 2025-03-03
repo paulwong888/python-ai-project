@@ -4,3 +4,4 @@ langchain
 yfinance
 serpapi
 google-search-results
+streamlit
