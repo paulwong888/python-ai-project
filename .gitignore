@@ -32,3 +32,4 @@ wandb
 09_fine-turnning/unsloth/gsm8k_grpo/outputs
 /.cache
 .gitignore
+14_medical_consultation_system/data/04_neo4j/db

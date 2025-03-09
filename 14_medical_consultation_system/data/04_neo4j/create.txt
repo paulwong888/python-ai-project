@@ -1,0 +1,12 @@
+// 疾病节点
+CREATE (:Disease {name: '2型糖尿病', code: 'E11', category: '内分泌系统疾病'})
+
+// 药品节点
+CREATE (:Drug {name: '二甲双胍', form: '片剂', category: '口服降糖药'})
+
+// 科室节点
+CREATE (:Department {name: '内分泌科', location: '门诊大楼3层'})
+
+// 关系建立
+MATCH (d:Drug {name: '二甲双胍'}), (dis:Disease {name: '2型糖尿病'})
+CREATE (d)-[:TREATS {guideline: 'ADA标准治疗'}]->(dis)

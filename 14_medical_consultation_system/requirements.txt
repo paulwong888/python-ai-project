@@ -1,0 +1,8 @@
+pandas
+spacy
+py2neo==2021.2.4
+transformers
+pytorch-crf
+peft
+sentencepiece
+bitsandbytes
