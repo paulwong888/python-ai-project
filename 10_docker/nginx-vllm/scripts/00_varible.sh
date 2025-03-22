@@ -13,7 +13,7 @@
 # export HTTPS_PROXY=https://192.168.0.102:7890
 
 
-export DOCKER_ROOT_DIR=/home/paul/paulwong/work/workspaces/python-ai-project/docker/nginx-vllm/docker-data
+export DOCKER_ROOT_DIR=/home/paul/paulwong/work/workspaces/python-ai-project/10_docker/nginx-vllm/docker-data
 export NGINX_DATA_DIR=${DOCKER_ROOT_DIR}/nginx-vllm
 # export OLLAMA_DATA_DIR=${DOCKER_ROOT_DIR}/docker-ollama/data
 # export OPEN_WEBUI_DATA_DIR=${DOCKER_ROOT_DIR}/docker-webui/data

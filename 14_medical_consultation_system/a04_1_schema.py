@@ -126,4 +126,8 @@ https://huggingface.co/datasets/zjunlp/iepile/blob/main/IE-zh/RE/CMeIE/schema.js
     ], 
     "task": "RE"
 }
+
+{"人物":{"比赛项目(赛事名称)":null,"参赛地点(城市)":null,"获奖时间(时间)":null,"选手国籍(国籍)":null}}
+{"同义词（疾病）": {"内窥镜检查": null, "病理分型": null, "临床表现":null}}
+
 """

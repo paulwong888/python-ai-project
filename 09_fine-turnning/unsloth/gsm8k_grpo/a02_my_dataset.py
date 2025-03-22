@@ -1,5 +1,6 @@
 from a00_constant import *
 from datasets import load_dataset
+from transformers import AutoTokenizer
 
 """
 {
@@ -47,11 +48,11 @@ format to:
 
 class MyDataset():
     def __init__(self):
-        self.my_dataset = load_dataset(
+        my_dataset = load_dataset(
             path=dataset_dir
         )
             # remove_columns = ["question", "answer"]
-        self.my_dataset = self.my_dataset.map(
+        self.my_dataset = my_dataset.map(
             lambda x: self.format_prompt(x), 
         )
 
@@ -71,7 +72,12 @@ class MyDataset():
         }
 
 if __name__ == "__main__":
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     my_dataset = MyDataset()
     print(my_dataset.my_dataset)
     # print(my_dataset.my_dataset["train"][0:2])
-    print(my_dataset.my_dataset["test"][0:2])
+    data =  my_dataset.my_dataset["test"][0]
+    print(type(data))
+    print(data["prompt"])
+    print(tokenizer.apply_chat_template([data["prompt"]], tokenize=False))
+    # {'question': ["Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?", 'A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?'], 'answer': ['# 18', '# 3'], 'prompt': [[{'content': '\nRespond in the following format:\n<reasoning>\n...\n</reasoning>\n<answer>\n...\n</answer>\n', 'role': 'system'}, {'content': "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?", 'role': 'user'}], [{'content': '\nRespond in the following format:\n<reasoning>\n...\n</reasoning>\n<answer>\n...\n</answer>\n', 'role': 'system'}, {'content': 'A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?', 'role': 'user'}]]}

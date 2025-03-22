@@ -9,10 +9,11 @@ class MyMerge(MyModel):
         self.model, self.tokenizer = FastLanguageModel.from_pretrained(
             model_name = model_name,
         )
-        self.model.load_adapter(adapter_path)
+        # self.model.load_adapter(adapter_path)
+        self.model.load_adapter("09_fine-turnning/trl/jukeai_tiku/output/fine_tuned_model")
 
 if __name__ == "__main__":
-    my_merge = MyMerge().get_peft_model()
+    my_merge = MyMerge()#.get_peft_model()
     """
     C /n【解析】细胞类生物都含有DNA和RNA两种核酸，其遗传物质是DNA。核酸的基本组成单位是核苷酸，1分子核苷酸由1分子磷酸、1分子五碳糖和1分子含氮碱基组成。
     蛋白质的基本组成单位是氨基酸，氨基酸通过脱水缩合反应形成肽键（－CO－NH－），组成蛋白质的氨基酸之间通过肽键连接。 

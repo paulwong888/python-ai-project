@@ -2,3 +2,6 @@ transformers
 openai
 python-dotenv
 datasets
+trl
+bitsandbytes
+peft

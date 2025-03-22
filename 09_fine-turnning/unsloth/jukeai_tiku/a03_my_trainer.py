@@ -13,12 +13,15 @@ class MyTrainer():
             job_type="training", 
             anonymous="allow"
         )
-        my_training_dataset = MyDataset().train_dataset
+        my_dataset = MyDataset()
+        my_training_dataset = my_dataset.train_dataset
+        my_test_dataset = my_dataset.test_dataset
         my_model = MyModel()
         self.trainer = SFTTrainer(
             model = my_model.get_peft_model(),
             tokenizer = my_model.tokenizer,
             train_dataset = my_training_dataset,
+            eval_dataset = my_test_dataset,
             dataset_text_field = "text",
             max_seq_length = max_seq_length,
             dataset_num_proc = dataset_num_proc,
@@ -26,7 +29,8 @@ class MyTrainer():
                 per_device_train_batch_size=per_device_train_batch_size,
                 gradient_accumulation_steps=gradient_accumulation_steps,
                 warmup_steps=warmup_steps,
-                max_steps=max_steps,
+                # max_steps=max_steps,
+                num_train_epochs = num_train_epochs,
                 learning_rate=learning_rate,
                 fp16=fp16,
                 bf16=bf16,

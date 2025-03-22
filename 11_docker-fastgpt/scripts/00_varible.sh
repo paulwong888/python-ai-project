@@ -13,5 +13,5 @@
 # export HTTPS_PROXY=https://192.168.0.102:7890
 
 
-export DOCKER_ROOT_DIR=/home/paul/paulwong/work/workspaces/python-ai-project/docker-fastgpt/data
+export DOCKER_ROOT_DIR=/home/paul/paulwong/work/workspaces/python-ai-project/11_docker-fastgpt/data
 export NGINX_DATA_DIR=${DOCKER_ROOT_DIR}/nginx

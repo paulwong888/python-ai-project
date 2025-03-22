@@ -5,4 +5,6 @@ model_path = "/home/paul/.cache/huggingface/models/models--Qwen--Qwen2.5-1.5B-In
 
 data_path = "/home/paul/.cache/huggingface/hub/datasets--AI-MO--NuminaMath-CoT/data"
 
-distill_data_path = "/home/paul/paulwong/work/workspaces/python-ai-project/15_distill/01_qwen_distill/data"
+distill_data_path = "/home/paul/paulwong/work/workspaces/python-ai-project/15_distill/01_qwen_distill/data/input"
+
+output_path = "/home/paul/paulwong/work/workspaces/python-ai-project/15_distill/01_qwen_distill/data/output"

@@ -10,56 +10,12 @@ from transformers import BitsAndBytesConfig
 from a04_0_constant import *
 
 
-
-# task = 'NER'
-# language = 'en'
-# schema = ['person', 'organization', 'else', 'location']
-# input = '284 Robert Allenby ( Australia ) 69 71 71 73 , Miguel Angel Martin ( Spain ) 75 70 71 68 ( Allenby won at first play-off hole )'
-
-
-
-
-
-
-
-
-
-
-
-# sintruct = "{\"instruction\": \"You are an expert in named entity recognition. Please extract entities that match the schema definition from the input. Return an empty list if the entity type does not exist. Please respond in the format of a JSON string.\", \"schema\": [\"person\", \"organization\", \"else\", \"location\"], \"input\": \"284 Robert Allenby ( Australia ) 69 71 71 73 , Miguel Angel Martin ( Spain ) 75 70 71 68 ( Allenby won at first play-off hole )\"}"
-# sintruct = '<reserved_106>' + sintruct + '<reserved_107>'
-# input_ids = tokenizer.encode(sintruct, return_tensors="pt").to(device)
-
-
 class MyRelationExtraModel():
     def __init__(self):
-        # model_root_path = "/home/paul/.cache/huggingface/hub/combine-models/medical/extract-relation/"
-        # model_path = model_root_path + "models--baichuan-inc--Baichuan2-13B-Chat/"
-        # lora_path = model_root_path + "models--zjunlp--baichuan2-13b-iepile-lora/"
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        # model_path = "baichuan-inc/Baichuan2-13B-Chat"
-        # lora_path = "zjunlp/baichuan2-13b-iepile-lora"
-
         config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-
-        # model = AutoModelForCausalLM.from_pretrained(
-        #     model_path,
-        #     config=config,
-        #     device_map="auto",  
-        #     torch_dtype=torch.bfloat16,
-        #     trust_remote_code=True,
-        #     offload_folder="./offload",  # 关键参数：自定义分载目录
-        #     use_safetensors=False
-        # )
-
-
-        # model = PeftModel.from_pretrained(
-        #     model,
-        #     lora_path,
-        # )
-
 
         quantization_config=BitsAndBytesConfig(     
             load_in_4bit=True,
@@ -117,6 +73,7 @@ if __name__ == "__main__":
     task = 'RE'
     language = 'zh'
     schema = ['同义词（疾病）', '内窥镜检查', '病理分型', '临床表现']
+    # {"同义词（疾病）": {"内窥镜检查": null, "病理分型": null, "临床表现":null}}
     input = "4.十二指肠炎（duodenitis） 十二指肠炎常多相伴其他部位的炎症，内镜下黏膜炎症的改变有四种类型： （1）充血型： 黏膜充血、水肿，镜下反光增强。 （4）出血糜烂型： 黏膜充血处见点状、片状或蜂窝状糜烂，表面可有出血。"
 
     print(my_relation_extra_model.generate(task, language, schema, input))

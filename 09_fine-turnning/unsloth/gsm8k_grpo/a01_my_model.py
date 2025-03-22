@@ -25,13 +25,13 @@ class MyModel():
 
     def fast_generate(self, question: str):
         input = self.tokenizer.apply_chat_template(
-        conversation = [
-            # {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": question},
-        ],
-        tokenize = False, 
-        add_generation_prompt = True
-    )
+            conversation = [
+                # {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": question},
+            ],
+            tokenize = False, 
+            add_generation_prompt = True
+        )
         print(type(input))
         sampling_params = SamplingParams(
             temperature = 0.8,
