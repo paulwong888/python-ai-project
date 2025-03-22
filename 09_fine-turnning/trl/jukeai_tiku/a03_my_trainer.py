@@ -11,14 +11,14 @@ class MyTrainer():
         my_model = MyModel()
         sft_config = SFTConfig(
             output_dir = output_dir,
-            num_train_epochs = 10,
-            per_device_train_batch_size = 2,
+            num_train_epochs = 5,
+            per_device_train_batch_size = 6,
             gradient_checkpointing = True,
-            gradient_accumulation_steps = 1,
-            learning_rate = 2e-5,
-            fp16 = True,
-            fp16_full_eval=False,  # ✅ 禁用评估 FP16
-            optim="adamw_torch_fused",  # ✅ 使用融合优化器
+            # gradient_accumulation_steps = 1,
+            # learning_rate = 2e-5,
+            # fp16 = False,
+            # fp16_full_eval=False,  # ✅ 禁用评估 FP16
+            # optim="adamw_torch_fused",  # ✅ 使用融合优化器
             # optim = "adamw_8bit",
             logging_steps=1,
         )
@@ -33,11 +33,11 @@ class MyTrainer():
         self.my_trainer: SFTTrainer = SFTTrainer(
             model = my_model.model,
             args = sft_config,
-            peft_config = peft_config,
+            # peft_config = peft_config,
             train_dataset = my_dataset.train_dataset,
             eval_dataset = my_dataset.test_dataset,
-            formatting_func = lambda x: my_dataset.format_prompt(x),
-            data_collator = my_dataset.data_collator,
+            # formatting_func = lambda x: my_dataset.format_prompt(x),
+            # data_collator = my_dataset.data_collator,
             # max_seq_length = 1024,
         )
 

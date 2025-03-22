@@ -11,10 +11,13 @@ class MyDataset():
         device = "cuda" if torch.cuda.is_available() else "cpu"
         self.train_dataset = load_dataset(dataset_dir, split="train")
         self.test_dataset = load_dataset(dataset_dir, split="test")
+
+        self.train_dataset = self.train_dataset.rename_columns({"instruction": "prompt", "output": "completion"})
+        self.test_dataset = self.test_dataset.rename_columns({"instruction": "prompt", "output": "completion"})
         # self.train_dataset = self.pre_processing(train_dataset)
         # self.test_dataset = self.pre_processing(test_dataset)
         print(self.EOS_TOKEN)
-        self.data_collator = DataCollatorForCompletionOnlyLM("### Response:", tokenizer=tokenizer)
+        self.data_collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer)
 
     def format_prompt(self, sample):
         # print(type(sample))

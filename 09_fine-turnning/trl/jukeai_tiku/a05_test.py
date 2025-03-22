@@ -4,7 +4,10 @@ from trl import SFTConfig, SFTTrainer, DataCollatorForCompletionOnlyLM
 
 dataset = load_dataset("sahil2801/CodeAlpaca-20k", split="train")
 
-model = AutoModelForCausalLM.from_pretrained("facebook/opt-350m")
+model = AutoModelForCausalLM.from_pretrained(
+    "facebook/opt-350m",
+    device_map = "auto"
+)
 tokenizer = AutoTokenizer.from_pretrained("facebook/opt-350m")
 
 def formatting_prompts_func_bak(example):
@@ -18,7 +21,7 @@ def formatting_prompts_func(example):
     text = f"### Question: {example['instruction']}\n ### Answer: {example['output']}"
     return text
 
-response_template = " ### Answer:"
+response_template = " ### Answer:\n"
 collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer)
 
 trainer = SFTTrainer(
