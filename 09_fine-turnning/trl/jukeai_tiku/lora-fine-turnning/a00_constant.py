@@ -2,12 +2,12 @@
 env_file_path = "/home/paul/paulwong/work/config"
 model_name = "/home/paul/.cache/huggingface/models/models--Qwen--Qwen2.5-1.5B-Instruct"
 dataset_dir = "/home/paul/.cache/huggingface/hub/datasets--juke-ai--tiku"
-output_dir = "/home/paul/paulwong/work/workspaces/python-ai-project/09_fine-turnning/trl/jukeai_tiku/output/"
+output_dir = "/home/paul/paulwong/work/workspaces/python-ai-project/09_fine-turnning/trl/jukeai_tiku/lora-fine-turnning/output/"
 adapter_dir = output_dir + "fine_tuned_model"
 best_adapter_dir = output_dir + "checkpoint-910"
 # output_dir = "/home/paul/paulwong/work/workspaces/python-ai-project/09_fine-turnning/trl/jukeai_tiku/output/checkpoint-910/"
 
-prompt_style_bak = """以下是一个描述任务的指令，配有提供进一步背景的输入。请写出一个适当完成请求的回答。
+prompt_style = """以下是一个描述任务的指令，配有提供进一步背景的输入。请写出一个适当完成请求的回答。
 
 ### Instruction:
 您是一位专业的高考老师，擅长分析和解答各类高考试卷问题，包括选择题、填空题、解答题和作文题。
@@ -18,12 +18,3 @@ prompt_style_bak = """以下是一个描述任务的指令，配有提供进一�
 
 ### Response:
 {}"""
-
-prompt_style = """
-### Question:
-{}
-
-### Response:
-{}"""
-
-response_template = "### Response:\n"

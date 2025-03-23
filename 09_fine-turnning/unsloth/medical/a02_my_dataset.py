@@ -16,7 +16,8 @@ class MyDataset():
         return dataset.map(
             lambda x: self.format_prompt(x),
             batched = True,
-            remove_columns = ["instruction", "input", "output"]
+            # remove_columns = ["instruction", "input", "output"]
+            remove_columns = ["Question", "Complex_CoT", "Response"]
         )
 
     def format_prompt(self, samples):

@@ -19,7 +19,7 @@ def formatting_prompts_func_bak(example):
 
 def formatting_prompts_func(example):
     text = f"### Question: {example['instruction']}\n ### Answer: {example['output']}"
-    return text
+    return [{"text": text}]
 
 response_template = " ### Answer:\n"
 collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer)
@@ -27,7 +27,7 @@ collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenize
 trainer = SFTTrainer(
     model,
     train_dataset=dataset,
-    args=SFTConfig(output_dir="/tmp"),
+    # args=SFTConfig(output_dir="/tmp"),
     formatting_func=formatting_prompts_func,
     data_collator=collator,
 )
