@@ -1,12 +1,13 @@
 import torch
 from a00_constant import *
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, TextStreamer
 from transformers.pipelines import pipeline
 
 class MyModel():
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.streamer = TextStreamer(self.tokenizer)
         bnb_config = BitsAndBytesConfig(
             load_in_4bit = True,
             bnb_4bit_quant_type = "nf4",
@@ -31,11 +32,12 @@ class MyModel():
 
     def generate(self, message):
         input = prompt_style.format(message, "")
-        return self.pipeline(
+        self.pipeline(
             input,
             max_length = 512,
+            streamer = self.streamer,
             # truncation = True,
-        )[0]["generated_text"]
+        )
 
 """
 下列关于细胞呼吸在生产生活中应用的叙述，错误的是  （    ） A. 给含有酵母菌的发酵液连续通气可以提高产酒量 B. 适当降低温度和氧浓度有利于果蔬储藏 C. 利用乳酸细菌制作酸奶过程中需密闭隔绝空气 D. 黑暗条件下绿豆萌发成豆芽的过程中有机物总量不断减少
@@ -44,4 +46,4 @@ A /n【解析】呼吸作用的影响因素有：氧气、温度等。 【详解
 if __name__ == "__main__":
     my_model = MyModel()
     question = "下列关于细胞呼吸在生产生活中应用的叙述，错误的是  （    ） A. 给含有酵母菌的发酵液连续通气可以提高产酒量 B. 适当降低温度和氧浓度有利于果蔬储藏 C. 利用乳酸细菌制作酸奶过程中需密闭隔绝空气 D. 黑暗条件下绿豆萌发成豆芽的过程中有机物总量不断减少" #A
-    print(my_model.generate(question))
+    my_model.generate(question)

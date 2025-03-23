@@ -2,11 +2,12 @@ import torch
 import pandas as pd
 from a00_constant import *
 from a02_my_model import MyModel
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, TextStreamer
 
 class MyMerge(MyModel):
     def __init__(self):
         model, tokenizer = self.load_model_tokenizer()
+        self.streamer = TextStreamer(tokenizer)
         self.pipeline = pipeline(
             task = "text-generation",
             model = model,
@@ -42,8 +43,8 @@ if __name__ == "__main__":
     question3 = "下列关于生命系统中的信息传递的叙述，正确的是  （    ） A. 细胞内的遗传信息传递方式:DNARNA蛋白质（性状） B. 细胞间通过激素、神经递质实现其全部信息传递 C. 在兔→狐过程中，物质、能量从兔到狐单向传递，而信息却是双向传递的 D. 生态系统中信息传递发生在同种生物或不同种生物之间，并能调节种间关系"
     # C /n【解析】分析：细胞生物中遗传信息可以从DNA流向DNA，也可以从DNA流向RNA，进而流向蛋白质，在某些病毒中遗传信息可以从RNA流向RNA以及从RNA流向DNA。细胞间的信息交流主要有三种方式：①通过化学物质来传递信息，如激素；②通过细胞膜直接接触传递信息，如精卵识别；③通过细胞通道来传递信息，如高等植物细胞之间通过胞间连丝相互连接。生态系统中信息的类型包括物理信息、化学信息、行为信息，信息传递在生态系统中的作用主要体现在以下三方面：生态系统中生命活动的正常进行，离不开信息的作用；生物种群的繁衍，也离不开信息的传递；信息还能够调节生物的种间关系，维持生态系统稳定。 详解：A. 生物体细胞中，传递遗传信息传递途径有DNA→DNA即DNA的复制，也有DNA→RNA→蛋白质即转录和翻译，A错误；B. 细胞间的信息传递，除了通过激素，神经递质外，还可通过细胞膜上的糖蛋白传递信息，植物细胞间还可以形成胞间连丝实现信息传递，B错误； C. 物质和能量沿食物链单向传递，捕食过程中捕食者和被捕食者之间的信息传递是双向的，如狼可根据兔子留下的气味捕食后者，兔子同样也能依据狼的气味或行为特征躲避捕食，C正确；D. 信息传递既可以发生在生物与生物之间，也可以发生在生物与环境之间，如植物开花需要光信息和日照时间达到一定长度，这些物理信息即来自无机环境，D错误。 点睛：本题考查中心法则及其发展、细胞膜的功能、生态系统中的信息传递，要求考生识记中心法则的主要内容及后人对其进行的补充和完善；同时识记细胞膜的信息交流功能；掌握生态系统中信息传递在生产实践中的应用，能应用所学的知识准确判断各选项。
     my_merge = MyMerge()
-    print(my_merge.generate(question1))
+    my_merge.generate(question1)
     print("--" * 10)
-    print(my_merge.generate(question2))
+    my_merge.generate(question2)
     print("--" * 10)
-    print(my_merge.generate(question3))
+    my_merge.generate(question3)
