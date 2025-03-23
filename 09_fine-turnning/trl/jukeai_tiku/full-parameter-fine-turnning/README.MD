@@ -7,8 +7,14 @@ conda activate distill-data
 
 pip install -r 15_distill/01_qwen_distill/requirements.txt
 ```
+### 基座模型
+```
+Qwen/Qwen2.5-1.5B-Instruct
+```
 ### 数据集
-指令微调只需两个参数: “prompt”和"completion", 无需做任何其他处理, 而且做了反而没效果
+指令微调原本的数据集格式为: 问题、答案两列, 必须要转为单列, 列名为“text”, 里面的数据含system信息, 上下文和答案
+
+指令微调只需两个参数: “prompt”和"completion", 这种数据集格式由于没有system信息, 角色设定等, 效果不好
 
 ### 参考
 trl的 [SFT](https://huggingface.co/docs/trl/sft_trainer#best-practices)

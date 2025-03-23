@@ -31,7 +31,6 @@ class MyModel():
 
     def generate(self, message):
         input = prompt_style.format(message, "")
-        input = message
         return self.pipeline(
             input,
             max_length = 512,
