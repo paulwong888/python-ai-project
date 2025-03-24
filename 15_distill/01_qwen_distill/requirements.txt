@@ -5,3 +5,4 @@ datasets
 trl
 bitsandbytes
 peft
+deepspeed

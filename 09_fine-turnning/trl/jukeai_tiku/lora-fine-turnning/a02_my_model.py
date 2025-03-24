@@ -2,11 +2,13 @@ import torch
 from a00_constant import *
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, TextStreamer
 from transformers.pipelines import pipeline
+from peft import LoraConfig, get_peft_model
 
 class MyModel():
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.tokenizer.padding_side = "right"
         self.streamer = TextStreamer(self.tokenizer)
         bnb_config = BitsAndBytesConfig(
             load_in_4bit = True,
@@ -14,12 +16,23 @@ class MyModel():
             bnb_4bit_compute_dtype = getattr(torch, "float16"),
             bnb_4bit_use_double_quant = False,
         )
-        self.model = AutoModelForCausalLM.from_pretrained(
+        peft_config = LoraConfig(
+            r = 32,
+            lora_alpha = 64,
+            lora_dropout = 0.1,
+            # bias = "lora_only",
+            task_type = "CAUSAL_LM",
+            target_modules = "all-linear"  # 精简目标模块
+        )
+        model = AutoModelForCausalLM.from_pretrained(
             model_name,
             device_map = "auto",
             torch_dtype = torch.float16,
             # quantization_config = bnb_config,
             load_in_8bit = True,
+        )
+        self.model = get_peft_model(
+            model, peft_config
         )
         self.pipeline = pipeline(
             task = "text-generation",
