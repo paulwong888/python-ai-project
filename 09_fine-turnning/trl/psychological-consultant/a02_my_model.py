@@ -11,7 +11,7 @@ class MyModel():
             load_in_4bit = True,
             bnb_4bit_quant_type = "nf4",
             bnb_4bit_compute_dtype = getattr(torch, "float16"),
-            bnb_4bit_use_double_quant = False,
+            bnb_4bit_use_double_quant = True,
         )
         bnb_config_8bit = BitsAndBytesConfig(
             load_in_8bit=True,
@@ -21,8 +21,8 @@ class MyModel():
             model_dir,
             # device_map = "auto",
             torch_dtype = torch.bfloat16,
-            quantization_config = bnb_config_8bit,
-            # quantization_config = bnb_config_4bit,
+            # quantization_config = bnb_config_8bit,
+            quantization_config = bnb_config_4bit,
         )
         self.model = prepare_model_for_kbit_training(self.model)
         self.streamer = TextStreamer(self.tokenizer)
