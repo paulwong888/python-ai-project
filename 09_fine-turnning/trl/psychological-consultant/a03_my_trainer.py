@@ -15,19 +15,20 @@ class MyTrainer():
             per_device_eval_batch_size = 2,
             gradient_accumulation_steps = 4,
             gradient_checkpointing = True,
-            num_train_epochs = 5,
+            # num_train_epochs = 5,
             # eval setting
-            eval_strategy = "epoch", # 每个 epoch 结束后进行评估
-            eval_steps = 3,
-            save_strategy = "epoch",
-            save_steps = 3,
+            eval_strategy = "steps", # 每个 epoch 结束后进行评估
+            eval_steps = 1,
+            save_strategy = "steps",
+            save_steps = 1,
             metric_for_best_model = "eval_loss", # 监控验证集上的损失
             load_best_model_at_end = True, # 训练结束后加载最佳模型
+            greater_is_better = False, # 如果监控的是损失，设置为 False
 
-            warmup_ratio=0.03,                  # 学习率预热比例
-            lr_scheduler_type="cosine",         # 余弦学习率调度
-            weight_decay=0.01,                  # 权重衰减防过拟合
-            max_grad_norm=0.3,                  # 梯度裁剪阈值
+            # warmup_ratio=0.03,                  # 学习率预热比例
+            # lr_scheduler_type="cosine",         # 余弦学习率调度
+            # weight_decay=0.01,                  # 权重衰减防过拟合
+            # max_grad_norm=0.3,                  # 梯度裁剪阈值
             
             # greater_is_better = False, # 如果监控的是损失，设置为 False
             # lr_scheduler_type=a,
@@ -38,6 +39,9 @@ class MyTrainer():
             report_to="all",  # 将日志输出到 TensorBoard
             # log_level="info",  # 设置日志级别为 INFO
             logging_dir="./logs",
+
+            # 限制步数快速验证流程
+            max_steps = 1
         )
         # self.model = my_model.get_my_peft_model(),
         self.sft_trainer = SFTTrainer(
