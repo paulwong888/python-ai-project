@@ -1,0 +1,80 @@
+base_model: meta-llama/Llama-3.1-70B
+tokenizer_type: AutoTokenizer
+
+strict: false
+
+plugins:
+  - axolotl.integrations.liger.LigerPlugin
+  - axolotl.integrations.spectrum.SpectrumPlugin
+liger_rope: true
+liger_rms_norm: true
+liger_swiglu: true
+  # liger_cross_entropy: true
+  # liger_fused_linear_cross_entropy: true
+
+  # torch_compile: true
+
+dataloader_prefetch_factor: 8192
+dataloader_num_workers: 8
+dataloader_pin_memory: true
+
+dataset_processes: 16
+
+chat_template: llama3
+datasets:
+  - path: AI-MO/NuminaMath-CoT
+    type: chat_template
+    split: train
+    field_messages: messages
+    message_field_content: content
+    message_field_role: role
+
+
+dataset_prepared_path: /workspace/data/axolotl-artifacts/last_run_prepared
+val_set_size: 0.0
+output_dir: /workspace/data/axolotl-artifacts/outputs/llama3_1-70b-finetome
+save_safetensors: false  # saving final sharded dict may not work with safetensors
+
+wandb_project: numina-kd-experiment
+wandb_entity: axolotl-ai
+
+adapter: lora
+  # peft_use_dora: true
+lora_r: 512
+lora_alpha: 1024
+lora_dropout: 0.05
+lora_target_linear: true
+lora_modules_to_save:
+  - embed_tokens
+  - lm_head
+
+sequence_len: 4096
+sample_packing: true
+pad_to_sequence_len: true
+
+gradient_accumulation_steps: 1
+# 8x Node can support a batch size of up to 3
+micro_batch_size: 8
+num_epochs: 3
+optimizer: optimi_adamw
+lr_scheduler: cosine
+learning_rate: 1.0e-5
+
+train_on_inputs: false
+group_by_length: false
+bf16: true
+tf32: true
+
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: true
+logging_steps: 1
+flash_attention: true
+
+warmup_steps: 40
+saves_per_epoch: 1
+weight_decay: 0.1
+deepspeed: deepspeed_configs/zero3_bf16_cpuoffload_params.json
+special_tokens:
+  pad_token: <|finetune_right_pad_id|>
+  eos_token: <|eot_id|>
