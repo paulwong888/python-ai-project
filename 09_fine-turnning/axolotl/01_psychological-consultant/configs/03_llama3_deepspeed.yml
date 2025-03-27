@@ -7,7 +7,7 @@ base_model: /home/paul/.cache/huggingface/hub/models--Qwen--Qwen2-0.5B
 
 # dataset params
 datasets:
-  - path: /home/paul/paulwong/work/workspaces/python-ai-project/09_fine-turnning/axolotl/01_psychological-consultant/data/train.json
+  - path: data/train.json
   # - path: jaydenccc/AI_Storyteller_Dataset
     type: chat_template
     # type: alpaca
