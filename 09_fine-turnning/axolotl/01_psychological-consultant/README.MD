@@ -25,3 +25,6 @@ trl的 [SFT](https://huggingface.co/docs/trl/sft_trainer#best-practices)
 [配置文件](https://huggingface.co/allura-org/Teleut-7b)
 
 [配置文件UI编辑器](https://axolotl-ui.vercel.app)
+
+[配置文件解释](https://github.com/axolotl-ai-cloud/axolotl/blob/main/docs/config.qmd)
+
