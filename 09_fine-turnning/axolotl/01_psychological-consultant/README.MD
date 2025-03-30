@@ -8,6 +8,7 @@ conda activate axolotl
 pip install -r 09_fine-turnning/axolotl/01_psychological-consultant/requirements.txt
 
 git clone https://github.com/paulwong888/python-ai-project.git
+git clone git@github.com:paulwong888/python-ai-project.git
 ```
 ### 基座模型
 ```

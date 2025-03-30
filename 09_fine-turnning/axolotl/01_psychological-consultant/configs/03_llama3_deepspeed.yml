@@ -10,7 +10,10 @@ base_model: /root/workspaces/huggingface/models--deepseek-ai--DeepSeek-R1-Distil
 datasets:
   - path: data/train.json
     type: chat_template
-output_dir: ./models/Llama3_Storyteller_deepspeed
+output_dir: /root/autodl-tmp/models/Llama3_Storyteller_deepspeed
+
+plugins:
+  - axolotl.integrations.liger.LigerPlugin
 
 # model params
 sequence_length: 1024
@@ -21,12 +24,19 @@ special_tokens:
 bf16: auto
 bf32: false
 
+num_epochs: 5
 # training params
 # batch_size: 16
 micro_batch_size: 4
 num_epochs: 4
 optimize: adamw_bnb_8bit
-learning_rate: 0.001
+# lr_scheduler: cosine
+  # Input should be 'linear', 'cosine', 'cosine_with_restarts', 'polynomial', 'constant', 'constant_with_warmup', 'inverse_sqrt', 
+  # 'reduce_lr_on_plateau', 'cosine_with_min_lr' or 'warmup_stable_decay' [type=enum, input_value='cosine_with_warmup', input_type=str]
+lr_scheduler: cosine
+# learning_rate: 0.0002
+learning_rate: 2e-4
+warmup_ratio: 0.1
 
 # Gradient Accumulation
 gradient_accumulation_steps: 1
@@ -39,23 +49,31 @@ logging_steps: 1
 # LoRA
 adapter: qlora
 
-lora_r: 8
-lora_alpha: 16
-lora_dropout: 0.05
+lora_r: 32
+lora_alpha: 64
+# lora_dropout: 0.05
+lora_dropout: 0.2
 lora_target_modules:
-  - q_proj
-  - v_proj
-#  - k_proj
-#  - o_proj
-  - gate_proj
-#  - down_proj
-#  - up_proj
+lora_target_linear: true
+lora_fan_in_fan_out:
+# lora_target_modules:
+#   - q_proj
+#   - v_proj
+#   - k_proj
+#   - o_proj
+#   - gate_proj
+  # - down_proj
+  # - up_proj
 lora_modules_to_save:
   - embed_tokens
   - lm_head
 
+weight_decay: 0.01
 # lora_target_linear: true
 
+lora_mlp_kernel: true
+lora_qkv_kernel: true
+lora_o_kernel: true
 
 # Low Precision
 load_in_8bit: false
@@ -63,14 +81,17 @@ load_in_4bit: true
 
 train_on_inputs: false
 
+# 启用早停
+early_stopping_patience: 3
 val_set_size: 0.1
 eval_strategy: steps # Set to `"no"` to skip evaluation, `"epoch"` at end of each epoch, leave empty to infer from `eval_steps`.
-eval_steps: 50 # Leave empty to eval at each epoch, integer for every N steps. float for fraction of total steps
+eval_steps: 200  # 缩短验证间隔以更早发现问题
+# eval_steps: 500 # Leave empty to eval at each epoch, integer for every N steps. float for fraction of total steps
 evals_per_epoch: # number of times per epoch to run evals, mutually exclusive with eval_steps
 save_strategy: steps # Set to `"no"` to skip checkpoint saves, `"epoch"` at end of each epoch, `"best"` when better result is achieved, leave empty to infer from `save_steps`.
-save_steps: 50 # Leave empty to save at each epoch, integer for every N steps. float for fraction of total steps
+save_steps: 400 # Leave empty to save at each epoch, integer for every N steps. float for fraction of total steps
 saves_per_epoch: # number of times per epoch to save a checkpoint, mutually exclusive with save_steps
-save_total_limit: 
+save_total_limit: 2
 
 special_tokens:
   eos_token: "<|im_end|>"
