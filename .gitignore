@@ -35,3 +35,4 @@ wandb
 14_medical_consultation_system/data/04_neo4j/db
 output
 last_run_prepared
+09_fine-turnning/axolotl/01_psychological-consultant/.gradio/certificate.pem
