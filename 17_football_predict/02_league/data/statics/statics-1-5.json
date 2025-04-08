@@ -1,0 +1,168 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1035042"
+    },
+    "errors": [],
+    "results": 2,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 62,
+                "name": "Sheffield Utd",
+                "logo": "https://media.api-sports.io/football/teams/62.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 1
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 4
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 8
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 3
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 4
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 4
+                },
+                {
+                    "type": "Fouls",
+                    "value": 18
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 5
+                },
+                {
+                    "type": "Offsides",
+                    "value": 2
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "32%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 3
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 7
+                },
+                {
+                    "type": "Total passes",
+                    "value": 262
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 162
+                },
+                {
+                    "type": "Passes %",
+                    "value": "62%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "0.51"
+                }
+            ]
+        },
+        {
+            "team": {
+                "id": 52,
+                "name": "Crystal Palace",
+                "logo": "https://media.api-sports.io/football/teams/52.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 8
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 8
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 24
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 8
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 17
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 7
+                },
+                {
+                    "type": "Fouls",
+                    "value": 11
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 5
+                },
+                {
+                    "type": "Offsides",
+                    "value": 2
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "68%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 0
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 1
+                },
+                {
+                    "type": "Total passes",
+                    "value": 562
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 466
+                },
+                {
+                    "type": "Passes %",
+                    "value": "83%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "1.89"
+                }
+            ]
+        }
+    ]
+}
