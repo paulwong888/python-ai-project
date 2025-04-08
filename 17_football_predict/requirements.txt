@@ -4,3 +4,4 @@ scikit-learn
 xgboost
 requests
 python-dotenv
+cupy-cuda12x
