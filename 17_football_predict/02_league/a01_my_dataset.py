@@ -35,6 +35,23 @@ class MyDataset():
 
         return data
 
+    def find_read_json(self, dir_path, fixture_id):
+        result = None
+        with os.scandir(dir_path) as files:
+            print(fixture_id)
+            for entry in files:
+                if entry.is_file() and entry.name.endswith("json"):
+                    file_path = str(entry.path)
+                    data = self.read_json(file_path)
+                    tem_fixture_id = int(data["parameters"]["fixture"])
+                    # print(f"type tem_fixture_id: {type(tem_fixture_id)}, type fixture_id: {type(fixture_id)}")
+                    # print(f"current tem_fixture_id: {tem_fixture_id}, file_path: {file_path}")
+                    if tem_fixture_id == fixture_id:
+                        result = data
+                        break
+        return result
+
+
     def read_json(self, file_path):
         with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
@@ -54,26 +71,34 @@ class MyDataset():
         params = dict(
             fixture=fixture_id
         )
-        data  = self.request_data("/fixtures/statistics", params)
 
-        self.json_to_file(data, "statics/statics-" + statistics_index + ".json")
+        # 从api读取数据
+        # data  = self.request_data("/fixtures/statistics", params)
+
+        # self.json_to_file(data, "statics/statics-" + statistics_index + ".json")
+
+        # 从json读取数据
         # file_path = "17_football_predict/02_league/data/statics.json"
         # data  = self.read_json(file_path)["response"]
+
+        json_dir = os.path.join(json_out_dir, "statics") 
+        data = self.find_read_json(json_dir, fixture_id)
         
         stats_dict = {}
-        for team_info in data['response']:
-            stats = team_info["statistics"]
-            for stat in stats:
-                if team_info["team"]["id"] == home_id:
-                    if stat['type'] == 'Shots on Goal':
-                        stats_dict['home_shots_on_target'] = stat["value"]
-                    if stat['type'] == 'Ball Possession':
-                        stats_dict['home_possession'] = self.to_float(stat["value"])
-                elif team_info["team"]["id"] == away_id:
-                    if stat['type'] == 'Shots on Goal':
-                        stats_dict['away_shots_on_target'] = stat["value"]
-                    if stat['type'] == 'Ball Possession':
-                        stats_dict['away_possession'] = self.to_float(stat["value"])
+        if data:
+            for team_info in data['response']:
+                stats = team_info["statistics"]
+                for stat in stats:
+                    if team_info["team"]["id"] == home_id:
+                        if stat['type'] == 'Shots on Goal':
+                            stats_dict['home_shots_on_target'] = stat["value"]
+                        if stat['type'] == 'Ball Possession':
+                            stats_dict['home_possession'] = self.to_float(stat["value"])
+                    elif team_info["team"]["id"] == away_id:
+                        if stat['type'] == 'Shots on Goal':
+                            stats_dict['away_shots_on_target'] = stat["value"]
+                        if stat['type'] == 'Ball Possession':
+                            stats_dict['away_possession'] = self.to_float(stat["value"])
 
         return stats_dict
 
@@ -111,12 +136,13 @@ class MyDataset():
         # data = response.json()['response']
 
         # 从api读数据
-        data = self.request_data("/fixtures", params)
+        # data = self.request_data("/fixtures", params)
 
-        self.json_to_file(data, "fixtures/fixtures-" + str(fixtures_index) + ".json")
+        # self.json_to_file(data, "fixtures/fixtures-" + str(fixtures_index) + ".json")
+
         # 从json读数据
-        # file_path = "17_football_predict/02_league/data/fixtures.json"
-        # data = self.read_json(file_path)['response']
+        file_path = "17_football_predict/02_league/data/fixtures.json"
+        data = self.read_json(file_path)
         
         # 3. 解析数据
         matches = []
@@ -185,6 +211,12 @@ class MyDataset():
 if __name__ == '__main__':
 
     # print(os.path.join(json_out_dir, "fixtures/fixtures-"+"1"+".json"))
+
+    # json_dir = os.path.join(json_out_dir, "statics")
+    # with os.scandir(json_dir) as it:
+    #     for entry in it:
+    #         if entry.name.endswith("json") and entry.is_file():
+    #             print(entry.name, entry.path)
 
     my_dataset = MyDataset()
 
