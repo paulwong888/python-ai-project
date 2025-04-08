@@ -16,7 +16,7 @@ plugins:
   - axolotl.integrations.liger.LigerPlugin
 
 # model params
-sequence_length: 1024
+sequence_length: 2048
 pad_to_sequence_len: true
 special_tokens:
   pad_token: <|end_of_text|>
@@ -28,7 +28,6 @@ num_epochs: 5
 # training params
 # batch_size: 16
 micro_batch_size: 4
-num_epochs: 4
 optimize: adamw_bnb_8bit
 # lr_scheduler: cosine
   # Input should be 'linear', 'cosine', 'cosine_with_restarts', 'polynomial', 'constant', 'constant_with_warmup', 'inverse_sqrt', 
