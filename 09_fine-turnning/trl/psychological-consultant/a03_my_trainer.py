@@ -41,7 +41,11 @@ class MyTrainer():
             logging_dir="./logs",
 
             # 限制步数快速验证流程
-            max_steps = 1
+            max_steps = 1,
+
+            # 分布式训练配置
+            dataloader_num_workers = 4,
+            ddp_find_unused_parameters = False,
         )
         # self.model = my_model.get_my_peft_model(),
         self.sft_trainer = SFTTrainer(
