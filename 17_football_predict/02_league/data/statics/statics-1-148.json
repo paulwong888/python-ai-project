@@ -1,0 +1,168 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1035316"
+    },
+    "errors": [],
+    "results": 2,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 45,
+                "name": "Everton",
+                "logo": "https://media.api-sports.io/football/teams/45.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 6
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 8
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 21
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 7
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 16
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 5
+                },
+                {
+                    "type": "Fouls",
+                    "value": 18
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 5
+                },
+                {
+                    "type": "Offsides",
+                    "value": 0
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "39%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 3
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 3
+                },
+                {
+                    "type": "Total passes",
+                    "value": 313
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 235
+                },
+                {
+                    "type": "Passes %",
+                    "value": "75%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "3.36"
+                }
+            ]
+        },
+        {
+            "team": {
+                "id": 34,
+                "name": "Newcastle",
+                "logo": "https://media.api-sports.io/football/teams/34.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 3
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 7
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 13
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 3
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 7
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 6
+                },
+                {
+                    "type": "Fouls",
+                    "value": 8
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 2
+                },
+                {
+                    "type": "Offsides",
+                    "value": 2
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "61%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 0
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 3
+                },
+                {
+                    "type": "Total passes",
+                    "value": 539
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 452
+                },
+                {
+                    "type": "Passes %",
+                    "value": "84%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "1.57"
+                }
+            ]
+        }
+    ]
+}

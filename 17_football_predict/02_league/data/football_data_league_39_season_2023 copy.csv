@@ -1,0 +1,381 @@
+match_id,date,league_id,season,home_team,away_team,home_goals,away_goals,venue,referee,home_shots_on_target,home_possession,away_shots_on_target,away_possession
+1035037,2023-08-12T03:00:00+08:00,39,2023,Burnley,Manchester City,0,3,Turf Moor,C. Pawson,1.0,0.34,8.0,0.66
+1035038,2023-08-12T19:30:00+08:00,39,2023,Arsenal,Nottingham Forest,2,1,Emirates Stadium,M. Oliver,7.0,0.78,2.0,0.22
+1035039,2023-08-12T22:00:00+08:00,39,2023,Bournemouth,West Ham,1,1,Vitality Stadium,P. Bankes,5.0,0.63,3.0,0.37
+1035041,2023-08-12T22:00:00+08:00,39,2023,Everton,Fulham,0,1,Goodison Park,S. Attwell,9.0,0.41,2.0,0.59
+1035040,2023-08-12T22:00:00+08:00,39,2023,Brighton,Luton,4,1,The American Express Community Stadium,D. Coote,12.0,0.71,3.0,0.29
+1035042,2023-08-12T22:00:00+08:00,39,2023,Sheffield Utd,Crystal Palace,0,1,Bramall Lane,J. Brooks,1.0,0.32,8.0,0.68
+1035043,2023-08-13T00:30:00+08:00,39,2023,Newcastle,Aston Villa,5,1,St. James' Park,A. Madley,13.0,0.53,6.0,0.47
+1035044,2023-08-13T21:00:00+08:00,39,2023,Brentford,Tottenham,2,2,Gtech Community Stadium,R. Jones,6.0,0.3,6.0,0.7
+1035045,2023-08-13T23:30:00+08:00,39,2023,Chelsea,Liverpool,1,1,Stamford Bridge,A. Taylor,4.0,0.65,1.0,0.35
+1035046,2023-08-15T03:00:00+08:00,39,2023,Manchester United,Wolves,1,0,Old Trafford,S. Hooper,3.0,0.51,6.0,0.49
+1035053,2023-08-19T02:45:00+08:00,39,2023,Nottingham Forest,Sheffield Utd,2,1,The City Ground,P. Bankes,4.0,0.5,3.0,0.5
+1035049,2023-08-19T22:00:00+08:00,39,2023,Fulham,Brentford,0,3,Craven Cottage,D. Bond,2.0,0.55,8.0,0.45
+1035056,2023-08-19T22:00:00+08:00,39,2023,Wolves,Brighton,1,4,Molineux Stadium,A. Madley,5.0,0.46,8.0,0.54
+1035050,2023-08-19T22:00:00+08:00,39,2023,Liverpool,Bournemouth,3,1,Anfield,T. Bramall,10.0,0.65,5.0,0.35
+1035054,2023-08-20T00:30:00+08:00,39,2023,Tottenham,Manchester United,2,0,Tottenham Hotspur Stadium,M. Oliver,6.0,0.56,6.0,0.44
+1035052,2023-08-20T03:00:00+08:00,39,2023,Manchester City,Newcastle,1,0,Etihad Stadium,R. Jones,4.0,0.6,1.0,0.4
+1035047,2023-08-20T21:00:00+08:00,39,2023,Aston Villa,Everton,4,0,Villa Park,A. Taylor,7.0,0.6,2.0,0.4
+1035055,2023-08-20T23:30:00+08:00,39,2023,West Ham,Chelsea,3,1,London Stadium,J. Brooks,6.0,0.24,4.0,0.76
+1035048,2023-08-22T03:00:00+08:00,39,2023,Crystal Palace,Arsenal,0,1,Selhurst Park,D. Coote,2.0,0.47,3.0,0.53
+1035062,2023-08-26T03:00:00+08:00,39,2023,Chelsea,Luton,3,0,Stamford Bridge,R. Jones,,,,
+1035057,2023-08-26T19:30:00+08:00,39,2023,Bournemouth,Tottenham,0,2,Vitality Stadium,T. Robinson,,,,
+1035064,2023-08-26T22:00:00+08:00,39,2023,Manchester United,Nottingham Forest,3,2,Old Trafford,S. Attwell,,,,
+1035058,2023-08-26T22:00:00+08:00,39,2023,Arsenal,Fulham,2,2,Emirates Stadium,P. Tierney,,,,
+1035063,2023-08-26T22:00:00+08:00,39,2023,Everton,Wolves,0,1,Goodison Park,C. Pawson,,,,
+1035059,2023-08-26T22:00:00+08:00,39,2023,Brentford,Crystal Palace,1,1,Gtech Community Stadium,P. Bankes,,,,
+1035060,2023-08-27T00:30:00+08:00,39,2023,Brighton,West Ham,1,3,The American Express Community Stadium,A. Taylor,,,,
+1035061,2023-08-27T21:00:00+08:00,39,2023,Burnley,Aston Villa,1,3,Turf Moor,M. Salisbury,,,,
+1035066,2023-08-27T21:00:00+08:00,39,2023,Sheffield Utd,Manchester City,1,2,Bramall Lane,J. Gillett,,,,
+1035065,2023-08-27T23:30:00+08:00,39,2023,Newcastle,Liverpool,1,2,St. James' Park,J. Brooks,,,,
+1035074,2023-09-02T03:00:00+08:00,39,2023,Luton,West Ham,1,2,Kenilworth Road,P. Tierney,,,,
+1035076,2023-09-02T19:30:00+08:00,39,2023,Sheffield Utd,Everton,2,2,Bramall Lane,A. Madley,,,,
+1035070,2023-09-02T22:00:00+08:00,39,2023,Burnley,Tottenham,2,5,Turf Moor,D. England,,,,
+1035071,2023-09-02T22:00:00+08:00,39,2023,Chelsea,Nottingham Forest,0,1,Stamford Bridge,T. Robinson,,,,
+1035075,2023-09-02T22:00:00+08:00,39,2023,Manchester City,Fulham,5,1,Etihad Stadium,M. Oliver,,,,
+1035068,2023-09-02T22:00:00+08:00,39,2023,Brentford,Bournemouth,2,2,Gtech Community Stadium,R. Madley,,,,
+1035069,2023-09-03T00:30:00+08:00,39,2023,Brighton,Newcastle,3,1,The American Express Community Stadium,S. Attwell,,,,
+1035073,2023-09-03T21:00:00+08:00,39,2023,Liverpool,Aston Villa,3,0,Anfield,S. Hooper,,,,
+1035072,2023-09-03T21:00:00+08:00,39,2023,Crystal Palace,Wolves,3,2,Selhurst Park,R. Jones,,,,
+1035067,2023-09-03T23:30:00+08:00,39,2023,Arsenal,Manchester United,3,1,Emirates Stadium,A. Taylor,,,,
+1035086,2023-09-16T19:30:00+08:00,39,2023,Wolves,Liverpool,1,3,Molineux Stadium,M. Oliver,,,,
+1035081,2023-09-16T22:00:00+08:00,39,2023,Manchester United,Brighton,1,3,Old Trafford,J. Gillett,,,,
+1035080,2023-09-16T22:00:00+08:00,39,2023,Fulham,Luton,1,0,Craven Cottage,M. Salisbury,,,,
+1035084,2023-09-16T22:00:00+08:00,39,2023,Tottenham,Sheffield Utd,2,1,Tottenham Hotspur Stadium,P. Bankes,,,,
+1035085,2023-09-16T22:00:00+08:00,39,2023,West Ham,Manchester City,1,3,London Stadium,A. Madley,,,,
+1035078,2023-09-16T22:00:00+08:00,39,2023,Aston Villa,Crystal Palace,3,1,Villa Park,D. England,,,,
+1035082,2023-09-17T00:30:00+08:00,39,2023,Newcastle,Brentford,1,0,St. James' Park,C. Pawson,,,,
+1035077,2023-09-17T21:00:00+08:00,39,2023,Bournemouth,Chelsea,0,0,Vitality Stadium,D. Coote,,,,
+1035079,2023-09-17T23:30:00+08:00,39,2023,Everton,Arsenal,0,1,Goodison Park,S. Hooper,,,,
+1035083,2023-09-19T02:45:00+08:00,39,2023,Nottingham Forest,Burnley,1,1,The City Ground,R. Jones,,,,
+1035095,2023-09-23T22:00:00+08:00,39,2023,Manchester City,Nottingham Forest,2,0,Etihad Stadium,A. Taylor,,,,
+1035092,2023-09-23T22:00:00+08:00,39,2023,Crystal Palace,Fulham,0,0,Selhurst Park,P. Tierney,,,,
+1035094,2023-09-23T22:00:00+08:00,39,2023,Luton,Wolves,1,1,Kenilworth Road,J. Smith,,,,
+1035088,2023-09-24T00:30:00+08:00,39,2023,Brentford,Everton,1,3,Gtech Community Stadium,M. Oliver,,,,
+1035090,2023-09-24T03:00:00+08:00,39,2023,Burnley,Manchester United,0,1,Turf Moor,T. Harrington,,,,
+1035093,2023-09-24T21:00:00+08:00,39,2023,Liverpool,West Ham,3,1,Anfield,C. Kavanagh,,,,
+1035087,2023-09-24T21:00:00+08:00,39,2023,Arsenal,Tottenham,2,2,Emirates Stadium,R. Jones,,,,
+1035091,2023-09-24T21:00:00+08:00,39,2023,Chelsea,Aston Villa,0,1,Stamford Bridge,J. Gillett,,,,
+1035089,2023-09-24T21:00:00+08:00,39,2023,Brighton,Bournemouth,3,1,The American Express Community Stadium,J. Brooks,,,,
+1035096,2023-09-24T23:30:00+08:00,39,2023,Sheffield Utd,Newcastle,0,8,Bramall Lane,S. Attwell,,,,
+1035098,2023-09-30T19:30:00+08:00,39,2023,Aston Villa,Brighton,6,1,Villa Park,A. Madley,,,,
+1035101,2023-09-30T22:00:00+08:00,39,2023,Manchester United,Crystal Palace,0,1,Old Trafford,C. Kavanagh,,,,
+1035102,2023-09-30T22:00:00+08:00,39,2023,Newcastle,Burnley,2,0,St. James' Park,T. Bramall,,,,
+1035097,2023-09-30T22:00:00+08:00,39,2023,Bournemouth,Arsenal,0,4,Vitality Stadium,M. Salisbury,,,,
+1035106,2023-09-30T22:00:00+08:00,39,2023,Wolves,Manchester City,2,1,Molineux Stadium,C. Pawson,,,,
+1035099,2023-09-30T22:00:00+08:00,39,2023,Everton,Luton,1,2,Goodison Park,A. Taylor,,,,
+1035105,2023-09-30T22:00:00+08:00,39,2023,West Ham,Sheffield Utd,2,0,London Stadium,G. Scott,,,,
+1035104,2023-10-01T00:30:00+08:00,39,2023,Tottenham,Liverpool,2,1,Tottenham Hotspur Stadium,S. Hooper,,,,
+1035103,2023-10-01T21:00:00+08:00,39,2023,Nottingham Forest,Brentford,1,1,The City Ground,P. Tierney,,,,
+1035100,2023-10-03T03:00:00+08:00,39,2023,Fulham,Chelsea,0,2,Craven Cottage,T. Robinson,,,,
+1035051,2023-10-04T02:30:00+08:00,39,2023,Luton,Burnley,1,2,Kenilworth Road,P. Bankes,,,,
+1035113,2023-10-07T19:30:00+08:00,39,2023,Luton,Tottenham,0,1,Kenilworth Road,J. Brooks,,,,
+1035114,2023-10-07T22:00:00+08:00,39,2023,Manchester United,Brentford,2,1,Old Trafford,A. Madley,,,,
+1035112,2023-10-07T22:00:00+08:00,39,2023,Fulham,Sheffield Utd,3,1,Craven Cottage,S. Barrott,,,,
+1035109,2023-10-07T22:00:00+08:00,39,2023,Burnley,Chelsea,1,4,Turf Moor,S. Attwell,,,,
+1035111,2023-10-07T22:00:00+08:00,39,2023,Everton,Bournemouth,3,0,Goodison Park,D. Coote,,,,
+1035110,2023-10-08T00:30:00+08:00,39,2023,Crystal Palace,Nottingham Forest,0,0,Selhurst Park,C. Pawson,,,,
+1035116,2023-10-08T21:00:00+08:00,39,2023,Wolves,Aston Villa,1,1,Molineux Stadium,R. Jones,,,,
+1035115,2023-10-08T21:00:00+08:00,39,2023,West Ham,Newcastle,2,2,London Stadium,P. Bankes,3.0,0.35,3.0,0.65
+1035108,2023-10-08T21:00:00+08:00,39,2023,Brighton,Liverpool,2,2,The American Express Community Stadium,A. Taylor,3.0,0.46,4.0,0.54
+1035107,2023-10-08T23:30:00+08:00,39,2023,Arsenal,Manchester City,1,0,Emirates Stadium,M. Oliver,2.0,0.49,1.0,0.51
+1035121,2023-10-21T19:30:00+08:00,39,2023,Liverpool,Everton,2,0,Anfield,C. Pawson,6.0,0.78,1.0,0.22
+1035123,2023-10-21T22:00:00+08:00,39,2023,Newcastle,Crystal Palace,4,0,St. James' Park,T. Robinson,7.0,0.6,3.0,0.4
+1035117,2023-10-21T22:00:00+08:00,39,2023,Bournemouth,Wolves,1,2,Vitality Stadium,P. Tierney,4.0,0.34,7.0,0.66
+1035122,2023-10-21T22:00:00+08:00,39,2023,Manchester City,Brighton,2,1,Etihad Stadium,R. Jones,6.0,0.55,3.0,0.45
+1035119,2023-10-21T22:00:00+08:00,39,2023,Brentford,Burnley,3,0,Gtech Community Stadium,J. Smith,10.0,0.5,1.0,0.5
+1035124,2023-10-21T22:00:00+08:00,39,2023,Nottingham Forest,Luton,2,2,The City Ground,S. Barrott,8.0,0.57,4.0,0.43
+1035120,2023-10-22T00:30:00+08:00,39,2023,Chelsea,Arsenal,2,2,Stamford Bridge,C. Kavanagh,5.0,0.43,3.0,0.57
+1035125,2023-10-22T03:00:00+08:00,39,2023,Sheffield Utd,Manchester United,1,2,Bramall Lane,M. Oliver,,,,
+1035118,2023-10-22T23:30:00+08:00,39,2023,Aston Villa,West Ham,4,1,Villa Park,D. Coote,,,,
+1035126,2023-10-24T03:00:00+08:00,39,2023,Tottenham,Fulham,2,0,Tottenham Hotspur Stadium,A. Taylor,,,,
+1035132,2023-10-28T03:00:00+08:00,39,2023,Crystal Palace,Tottenham,1,2,Selhurst Park,A. Madley,,,,
+1035131,2023-10-28T19:30:00+08:00,39,2023,Chelsea,Brentford,0,2,Stamford Bridge,S. Hooper,,,,
+1035127,2023-10-28T22:00:00+08:00,39,2023,Bournemouth,Burnley,2,1,Vitality Stadium,S. Barrott,,,,
+1035128,2023-10-28T22:00:00+08:00,39,2023,Arsenal,Sheffield Utd,5,0,Emirates Stadium,T. Robinson,,,,
+1035136,2023-10-29T00:30:00+08:00,39,2023,Wolves,Newcastle,2,2,Molineux Stadium,A. Taylor,,,,
+1035135,2023-10-29T21:00:00+08:00,39,2023,West Ham,Everton,0,1,London Stadium,S. Attwell,,,,
+1035133,2023-10-29T22:00:00+08:00,39,2023,Liverpool,Nottingham Forest,3,0,Anfield,C. Kavanagh,,,,
+1035130,2023-10-29T22:00:00+08:00,39,2023,Brighton,Fulham,1,1,The American Express Community Stadium,M. Salisbury,,,,
+1035129,2023-10-29T22:00:00+08:00,39,2023,Aston Villa,Luton,3,1,Villa Park,J. Brooks,,,,
+1035134,2023-10-29T23:30:00+08:00,39,2023,Manchester United,Manchester City,0,3,Old Trafford,P. Tierney,,,,
+1035140,2023-11-04T20:30:00+08:00,39,2023,Fulham,Manchester United,0,1,Craven Cottage,J. Brooks,,,,
+1035138,2023-11-04T23:00:00+08:00,39,2023,Burnley,Crystal Palace,0,2,Turf Moor,P. Bankes,,,,
+1035139,2023-11-04T23:00:00+08:00,39,2023,Everton,Brighton,1,1,Goodison Park,T. Robinson,,,,
+1035142,2023-11-04T23:00:00+08:00,39,2023,Manchester City,Bournemouth,6,1,Etihad Stadium,C. Pawson,,,,
+1035137,2023-11-04T23:00:00+08:00,39,2023,Brentford,West Ham,3,2,Gtech Community Stadium,T. Bramall,,,,
+1035145,2023-11-04T23:00:00+08:00,39,2023,Sheffield Utd,Wolves,2,1,Bramall Lane,R. Jones,,,,
+1035143,2023-11-05T01:30:00+08:00,39,2023,Newcastle,Arsenal,1,0,St. James' Park,S. Attwell,,,,
+1035144,2023-11-05T22:00:00+08:00,39,2023,Nottingham Forest,Aston Villa,2,0,The City Ground,J. Gillett,,,,
+1035141,2023-11-06T00:30:00+08:00,39,2023,Luton,Liverpool,1,1,Kenilworth Road,A. Madley,,,,
+1035146,2023-11-07T04:00:00+08:00,39,2023,Tottenham,Chelsea,1,4,Tottenham Hotspur Stadium,M. Oliver,,,,
+1035156,2023-11-11T20:30:00+08:00,39,2023,Wolves,Tottenham,2,1,Molineux Stadium,T. Robinson,,,,
+1035154,2023-11-11T23:00:00+08:00,39,2023,Manchester United,Luton,1,0,Old Trafford,G. Scott,,,,
+1035148,2023-11-11T23:00:00+08:00,39,2023,Arsenal,Burnley,3,1,Emirates Stadium,M. Oliver,,,,
+1035152,2023-11-11T23:00:00+08:00,39,2023,Crystal Palace,Everton,2,3,Selhurst Park,S. Barrott,,,,
+1035147,2023-11-12T01:30:00+08:00,39,2023,Bournemouth,Newcastle,2,0,Vitality Stadium,C. Kavanagh,,,,
+1035153,2023-11-12T22:00:00+08:00,39,2023,Liverpool,Brentford,3,0,Anfield,P. Tierney,,,,
+1035155,2023-11-12T22:00:00+08:00,39,2023,West Ham,Nottingham Forest,3,2,London Stadium,M. Salisbury,,,,
+1035150,2023-11-12T22:00:00+08:00,39,2023,Brighton,Sheffield Utd,1,1,The American Express Community Stadium,J. Brooks,,,,
+1035149,2023-11-12T22:00:00+08:00,39,2023,Aston Villa,Fulham,3,1,Villa Park,S. Hooper,,,,
+1035151,2023-11-13T00:30:00+08:00,39,2023,Chelsea,Manchester City,4,4,Stamford Bridge,A. Taylor,,,,
+1035299,2023-11-25T20:30:00+08:00,39,2023,Manchester City,Liverpool,1,1,Etihad Stadium,C. Kavanagh,,,,
+1035300,2023-11-25T23:00:00+08:00,39,2023,Newcastle,Chelsea,4,1,St. James' Park,S. Hooper,,,,
+1035295,2023-11-25T23:00:00+08:00,39,2023,Burnley,West Ham,1,2,Turf Moor,S. Barrott,,,,
+1035302,2023-11-25T23:00:00+08:00,39,2023,Sheffield Utd,Bournemouth,1,3,Bramall Lane,A. Madley,,,,
+1035301,2023-11-25T23:00:00+08:00,39,2023,Nottingham Forest,Brighton,2,3,The City Ground,A. Taylor,,,,
+1035298,2023-11-25T23:00:00+08:00,39,2023,Luton,Crystal Palace,2,1,Kenilworth Road,J. Gillett,,,,
+1035294,2023-11-26T01:30:00+08:00,39,2023,Brentford,Arsenal,0,1,Gtech Community Stadium,T. Robinson,,,,
+1035303,2023-11-26T22:00:00+08:00,39,2023,Tottenham,Aston Villa,1,2,Tottenham Hotspur Stadium,R. Jones,,,,
+1035296,2023-11-27T00:30:00+08:00,39,2023,Everton,Manchester United,0,3,Goodison Park,J. Brooks,,,,
+1035297,2023-11-28T04:00:00+08:00,39,2023,Fulham,Wolves,3,2,Craven Cottage,M. Salisbury,,,,
+1035305,2023-12-02T23:00:00+08:00,39,2023,Arsenal,Wolves,2,1,Emirates Stadium,P. Bankes,,,,
+1035307,2023-12-02T23:00:00+08:00,39,2023,Burnley,Sheffield Utd,5,0,Turf Moor,C. Kavanagh,,,,
+1035306,2023-12-02T23:00:00+08:00,39,2023,Brentford,Luton,3,1,Gtech Community Stadium,A. Taylor,,,,
+1035312,2023-12-03T01:30:00+08:00,39,2023,Nottingham Forest,Everton,0,1,The City Ground,P. Tierney,,,,
+1035311,2023-12-03T04:00:00+08:00,39,2023,Newcastle,Manchester United,1,0,St. James' Park,R. Jones,,,,
+1035304,2023-12-03T22:00:00+08:00,39,2023,Bournemouth,Aston Villa,2,2,Vitality Stadium,T. Bramall,,,,
+1035309,2023-12-03T22:00:00+08:00,39,2023,Liverpool,Fulham,4,3,Anfield,S. Attwell,,,,
+1035313,2023-12-03T22:00:00+08:00,39,2023,West Ham,Crystal Palace,1,1,London Stadium,M. Oliver,,,,
+1035308,2023-12-03T22:00:00+08:00,39,2023,Chelsea,Brighton,3,2,Stamford Bridge,C. Pawson,,,,
+1035310,2023-12-04T00:30:00+08:00,39,2023,Manchester City,Tottenham,3,3,Etihad Stadium,S. Hooper,,,,
+1035321,2023-12-06T03:30:00+08:00,39,2023,Wolves,Burnley,1,0,Molineux Stadium,J. Gillett,,,,
+1035318,2023-12-06T04:15:00+08:00,39,2023,Luton,Arsenal,3,4,Kenilworth Road,S. Barrott,,,,
+1035317,2023-12-07T03:30:00+08:00,39,2023,Fulham,Nottingham Forest,5,0,Craven Cottage,J. Smith,,,,
+1035315,2023-12-07T03:30:00+08:00,39,2023,Brighton,Brentford,2,1,The American Express Community Stadium,P. Bankes,,,,
+1035322,2023-12-07T03:30:00+08:00,39,2023,Crystal Palace,Bournemouth,0,2,Selhurst Park,C. Pawson,3.0,0.59,4.0,0.41
+1035319,2023-12-07T03:30:00+08:00,39,2023,Sheffield Utd,Liverpool,0,2,Bramall Lane,S. Hooper,1.0,0.24,8.0,0.76
+1035323,2023-12-07T04:15:00+08:00,39,2023,Manchester United,Chelsea,2,1,Old Trafford,C. Kavanagh,9.0,0.45,3.0,0.55
+1035314,2023-12-07T04:15:00+08:00,39,2023,Aston Villa,Manchester City,1,0,Villa Park,J. Brooks,7.0,0.46,2.0,0.54
+1035316,2023-12-08T03:30:00+08:00,39,2023,Everton,Newcastle,3,0,Goodison Park,T. Robinson,6.0,0.39,3.0,0.61
+1035320,2023-12-08T04:15:00+08:00,39,2023,Tottenham,West Ham,1,2,Tottenham Hotspur Stadium,M. Salisbury,7.0,0.75,5.0,0.25
+1035326,2023-12-09T20:30:00+08:00,39,2023,Crystal Palace,Liverpool,1,2,Selhurst Park,A. Madley,4.0,0.24,2.0,0.76
+1035330,2023-12-09T23:00:00+08:00,39,2023,Manchester United,Bournemouth,0,3,Old Trafford,P. Bankes,3.0,0.69,4.0,0.31
+1035333,2023-12-09T23:00:00+08:00,39,2023,Wolves,Nottingham Forest,1,1,Molineux Stadium,S. Barrott,4.0,0.68,2.0,0.32
+1035325,2023-12-09T23:00:00+08:00,39,2023,Brighton,Burnley,1,1,The American Express Community Stadium,S. Hooper,11.0,0.72,3.0,0.28
+1035331,2023-12-09T23:00:00+08:00,39,2023,Sheffield Utd,Brentford,1,0,Bramall Lane,S. Attwell,,,,
+1035324,2023-12-10T01:30:00+08:00,39,2023,Aston Villa,Arsenal,1,0,Villa Park,J. Gillett,,,,
+1035328,2023-12-10T22:00:00+08:00,39,2023,Fulham,West Ham,5,0,Craven Cottage,P. Tierney,,,,
+1035327,2023-12-10T22:00:00+08:00,39,2023,Everton,Chelsea,2,0,Goodison Park,M. Oliver,,,,
+1035329,2023-12-10T22:00:00+08:00,39,2023,Luton,Manchester City,1,2,Kenilworth Road,T. Robinson,,,,
+1035332,2023-12-11T00:30:00+08:00,39,2023,Tottenham,Newcastle,4,1,Tottenham Hotspur Stadium,C. Kavanagh,,,,
+1035342,2023-12-16T04:00:00+08:00,39,2023,Nottingham Forest,Tottenham,0,2,The City Ground,J. Gillett,,,,
+1035341,2023-12-16T23:00:00+08:00,39,2023,Newcastle,Fulham,3,0,St. James' Park,S. Barrott,,,,
+1035338,2023-12-16T23:00:00+08:00,39,2023,Chelsea,Sheffield Utd,2,0,Stamford Bridge,A. Madley,,,,
+1035340,2023-12-16T23:00:00+08:00,39,2023,Manchester City,Crystal Palace,2,2,Etihad Stadium,P. Tierney,,,,
+1035337,2023-12-17T01:30:00+08:00,39,2023,Burnley,Everton,0,2,Turf Moor,A. Taylor,,,,
+1035335,2023-12-17T22:00:00+08:00,39,2023,Arsenal,Brighton,2,0,Emirates Stadium,T. Robinson,,,,
+1035343,2023-12-17T22:00:00+08:00,39,2023,West Ham,Wolves,3,0,London Stadium,C. Kavanagh,,,,
+1035336,2023-12-17T22:00:00+08:00,39,2023,Brentford,Aston Villa,1,2,Gtech Community Stadium,D. Coote,,,,
+1035339,2023-12-18T00:30:00+08:00,39,2023,Liverpool,Manchester United,0,0,Anfield,M. Oliver,,,,
+1035345,2023-12-22T04:00:00+08:00,39,2023,Crystal Palace,Brighton,1,1,Selhurst Park,J. Brooks,,,,
+1035344,2023-12-23T04:00:00+08:00,39,2023,Aston Villa,Sheffield Utd,1,1,Villa Park,A. Taylor,,,,
+1035352,2023-12-23T20:30:00+08:00,39,2023,West Ham,Manchester United,2,0,London Stadium,S. Hooper,,,,
+1035346,2023-12-23T23:00:00+08:00,39,2023,Fulham,Burnley,0,2,Craven Cottage,R. Welch,,,,
+1035351,2023-12-23T23:00:00+08:00,39,2023,Tottenham,Everton,2,1,Tottenham Hotspur Stadium,S. Attwell,,,,
+1035350,2023-12-23T23:00:00+08:00,39,2023,Nottingham Forest,Bournemouth,2,3,The City Ground,R. Jones,,,,
+1035348,2023-12-23T23:00:00+08:00,39,2023,Luton,Newcastle,1,0,Kenilworth Road,D. England,,,,
+1035347,2023-12-24T01:30:00+08:00,39,2023,Liverpool,Arsenal,1,1,Anfield,C. Kavanagh,,,,
+1035353,2023-12-24T21:00:00+08:00,39,2023,Wolves,Chelsea,2,1,Molineux Stadium,D. Coote,6.0,0.32,5.0,0.68
+1035362,2023-12-26T20:30:00+08:00,39,2023,Newcastle,Nottingham Forest,1,3,St. James' Park,C. Kavanagh,7.0,0.62,6.0,0.38
+1035354,2023-12-26T23:00:00+08:00,39,2023,Bournemouth,Fulham,3,0,Vitality Stadium,T. Robinson,4.0,0.43,3.0,0.57
+1035363,2023-12-26T23:00:00+08:00,39,2023,Sheffield Utd,Luton,2,3,Bramall Lane,S. Allison,6.0,0.51,4.0,0.49
+1035358,2023-12-27T01:30:00+08:00,39,2023,Burnley,Liverpool,0,2,Turf Moor,P. Tierney,0.0,0.31,10.0,0.69
+1035361,2023-12-27T04:00:00+08:00,39,2023,Manchester United,Aston Villa,3,2,Old Trafford,C. Pawson,7.0,0.46,4.0,0.54
+1035359,2023-12-28T03:30:00+08:00,39,2023,Chelsea,Crystal Palace,2,1,Stamford Bridge,M. Salisbury,4.0,0.64,5.0,0.36
+1035356,2023-12-28T03:30:00+08:00,39,2023,Brentford,Wolves,1,4,Gtech Community Stadium,A. Madley,4.0,0.61,5.0,0.39
+1035360,2023-12-28T04:15:00+08:00,39,2023,Everton,Manchester City,1,3,Goodison Park,J. Brooks,2.0,0.28,9.0,0.72
+1035357,2023-12-29T03:30:00+08:00,39,2023,Brighton,Tottenham,4,2,American Express Stadium,J. Gillett,9.0,0.45,3.0,0.55
+1035355,2023-12-29T04:15:00+08:00,39,2023,Arsenal,West Ham,0,2,Emirates Stadium,M. Oliver,,,,
+1035368,2023-12-30T20:30:00+08:00,39,2023,Luton,Chelsea,2,3,Kenilworth Road,P. Tierney,,,,
+1035373,2023-12-30T23:00:00+08:00,39,2023,Wolves,Everton,3,0,Molineux Stadium,T. Bramall,,,,
+1035369,2023-12-30T23:00:00+08:00,39,2023,Manchester City,Sheffield Utd,2,0,Etihad Stadium,D. Coote,,,,
+1035365,2023-12-30T23:00:00+08:00,39,2023,Crystal Palace,Brentford,3,1,Selhurst Park,R. Jones,,,,
+1035364,2023-12-30T23:00:00+08:00,39,2023,Aston Villa,Burnley,3,2,Villa Park,S. Attwell,,,,
+1035370,2023-12-31T01:30:00+08:00,39,2023,Nottingham Forest,Manchester United,2,1,The City Ground,T. Robinson,,,,
+1035366,2023-12-31T22:00:00+08:00,39,2023,Fulham,Arsenal,2,1,Craven Cottage,J. Smith,,,,
+1035371,2023-12-31T22:00:00+08:00,39,2023,Tottenham,Bournemouth,3,1,Tottenham Hotspur Stadium,S. Hooper,,,,
+1035367,2024-01-02T04:00:00+08:00,39,2023,Liverpool,Newcastle,4,2,Anfield,A. Taylor,,,,
+1035372,2024-01-03T03:30:00+08:00,39,2023,West Ham,Brighton,0,0,London Stadium,S. Barrott,,,,
+1035378,2024-01-13T03:45:00+08:00,39,2023,Burnley,Luton,1,1,Turf Moor,T. Harrington,,,,
+1035379,2024-01-13T20:30:00+08:00,39,2023,Chelsea,Fulham,1,0,Stamford Bridge,A. Taylor,,,,
+1035382,2024-01-14T01:30:00+08:00,39,2023,Newcastle,Manchester City,2,3,St. James' Park,C. Kavanagh,,,,
+1035380,2024-01-14T22:00:00+08:00,39,2023,Everton,Aston Villa,0,0,Goodison Park,D. Coote,,,,
+1035381,2024-01-15T00:30:00+08:00,39,2023,Manchester United,Tottenham,2,2,Old Trafford,J. Brooks,,,,
+1035375,2024-01-20T20:30:00+08:00,39,2023,Arsenal,Crystal Palace,5,0,Emirates Stadium,P. Tierney,,,,
+1035376,2024-01-21T01:30:00+08:00,39,2023,Brentford,Nottingham Forest,3,2,Gtech Community Stadium,D. England,,,,
+1035383,2024-01-21T22:00:00+08:00,39,2023,Sheffield Utd,West Ham,2,2,Bramall Lane,M. Salisbury,,,,
+1035374,2024-01-22T00:30:00+08:00,39,2023,Bournemouth,Liverpool,0,4,Vitality Stadium,A. Madley,,,,
+1035377,2024-01-23T03:45:00+08:00,39,2023,Brighton,Wolves,0,0,American Express Stadium,C. Pawson,,,,
+1035387,2024-01-31T03:30:00+08:00,39,2023,Nottingham Forest,Arsenal,1,2,The City Ground,S. Hooper,,,,
+1035385,2024-01-31T03:45:00+08:00,39,2023,Fulham,Everton,0,0,Craven Cottage,T. Bramall,,,,
+1035386,2024-01-31T03:45:00+08:00,39,2023,Luton,Brighton,4,0,Kenilworth Road,R. Jones,,,,
+1035391,2024-01-31T04:00:00+08:00,39,2023,Crystal Palace,Sheffield Utd,3,2,Selhurst Park,T. Harrington,,,,
+1035384,2024-01-31T04:15:00+08:00,39,2023,Aston Villa,Newcastle,1,3,Villa Park,J. Brooks,,,,
+1035388,2024-02-01T03:30:00+08:00,39,2023,Tottenham,Brentford,3,2,Tottenham Hotspur Stadium,D. Coote,,,,
+1035393,2024-02-01T03:30:00+08:00,39,2023,Manchester City,Burnley,3,1,Etihad Stadium,S. Barrott,,,,
+1035392,2024-02-01T04:15:00+08:00,39,2023,Liverpool,Chelsea,4,1,Anfield,P. Tierney,,,,
+1035389,2024-02-02T03:30:00+08:00,39,2023,West Ham,Bournemouth,1,1,London Stadium,T. Robinson,,,,
+1035390,2024-02-02T04:15:00+08:00,39,2023,Wolves,Manchester United,3,4,Molineux Stadium,J. Gillett,,,,
+1035400,2024-02-03T20:30:00+08:00,39,2023,Everton,Tottenham,2,2,Goodison Park,M. Oliver,,,,
+1035402,2024-02-03T23:00:00+08:00,39,2023,Newcastle,Luton,4,4,St. James' Park,T. Bramall,,,,
+1035398,2024-02-03T23:00:00+08:00,39,2023,Burnley,Fulham,2,2,Turf Moor,D. Bond,,,,
+1035397,2024-02-03T23:00:00+08:00,39,2023,Brighton,Crystal Palace,4,1,American Express Stadium,S. Hooper,,,,
+1035403,2024-02-04T01:30:00+08:00,39,2023,Sheffield Utd,Aston Villa,0,5,Bramall Lane,P. Tierney,,,,
+1035401,2024-02-04T22:00:00+08:00,39,2023,Manchester United,West Ham,3,0,Old Trafford,A. Madley,,,,
+1035394,2024-02-04T22:00:00+08:00,39,2023,Bournemouth,Nottingham Forest,1,1,Vitality Stadium,R. Welch,,,,
+1035399,2024-02-04T22:00:00+08:00,39,2023,Chelsea,Wolves,2,4,Stamford Bridge,T. Robinson,,,,
+1035395,2024-02-05T00:30:00+08:00,39,2023,Arsenal,Liverpool,3,1,Emirates Stadium,A. Taylor,,,,
+1035396,2024-02-06T04:00:00+08:00,39,2023,Brentford,Manchester City,1,3,Gtech Community Stadium,J. Gillett,,,,
+1035409,2024-02-10T20:30:00+08:00,39,2023,Manchester City,Everton,2,0,Etihad Stadium,J. Brooks,,,,
+1035406,2024-02-10T23:00:00+08:00,39,2023,Fulham,Bournemouth,3,1,Craven Cottage,D. England,,,,
+1035413,2024-02-10T23:00:00+08:00,39,2023,Wolves,Brentford,0,2,Molineux Stadium,S. Hooper,,,,
+1035407,2024-02-10T23:00:00+08:00,39,2023,Liverpool,Burnley,3,1,Anfield,T. Robinson,,,,
+1035411,2024-02-10T23:00:00+08:00,39,2023,Tottenham,Brighton,2,1,Tottenham Hotspur Stadium,S. Barrott,,,,
+1035408,2024-02-10T23:00:00+08:00,39,2023,Luton,Sheffield Utd,1,3,Kenilworth Road,C. Kavanagh,,,,
+1035410,2024-02-11T01:30:00+08:00,39,2023,Nottingham Forest,Newcastle,2,3,The City Ground,A. Taylor,,,,
+1035412,2024-02-11T22:00:00+08:00,39,2023,West Ham,Arsenal,0,6,London Stadium,C. Pawson,,,,
+1035404,2024-02-12T00:30:00+08:00,39,2023,Aston Villa,Manchester United,1,2,Villa Park,R. Jones,,,,
+1035405,2024-02-13T04:00:00+08:00,39,2023,Crystal Palace,Chelsea,1,3,Selhurst Park,M. Oliver,,,,
+1035414,2024-02-17T20:30:00+08:00,39,2023,Brentford,Liverpool,1,4,Gtech Community Stadium,M. Oliver,,,,
+1035420,2024-02-17T23:00:00+08:00,39,2023,Newcastle,Bournemouth,2,2,St. James' Park,M. Salisbury,,,,
+1035417,2024-02-17T23:00:00+08:00,39,2023,Fulham,Aston Villa,1,2,Craven Cottage,L. Smith,,,,
+1035415,2024-02-17T23:00:00+08:00,39,2023,Burnley,Arsenal,0,5,Turf Moor,J. Gillett,,,,
+1035423,2024-02-17T23:00:00+08:00,39,2023,Tottenham,Wolves,1,2,Tottenham Hotspur Stadium,A. Taylor,,,,
+1035421,2024-02-17T23:00:00+08:00,39,2023,Nottingham Forest,West Ham,2,0,The City Ground,T. Bramall,,,,
+1035419,2024-02-18T01:30:00+08:00,39,2023,Manchester City,Chelsea,1,1,Etihad Stadium,A. Madley,,,,
+1035422,2024-02-18T22:00:00+08:00,39,2023,Sheffield Utd,Brighton,0,5,Bramall Lane,S. Attwell,,,,
+1035418,2024-02-19T00:30:00+08:00,39,2023,Luton,Manchester United,1,2,Kenilworth Road,D. Coote,,,,
+1035416,2024-02-20T04:00:00+08:00,39,2023,Everton,Crystal Palace,1,1,Goodison Park,P. Tierney,,,,
+1035349,2024-02-21T03:30:00+08:00,39,2023,Manchester City,Brentford,1,0,Etihad Stadium,D. England,,,,
+1035430,2024-02-22T03:30:00+08:00,39,2023,Liverpool,Luton,4,1,Anfield,A. Madley,,,,
+1035431,2024-02-24T23:00:00+08:00,39,2023,Manchester United,Fulham,1,2,Old Trafford,M. Oliver,,,,
+1035427,2024-02-24T23:00:00+08:00,39,2023,Brighton,Everton,1,1,American Express Stadium,T. Harrington,,,,
+1035429,2024-02-24T23:00:00+08:00,39,2023,Crystal Palace,Burnley,3,0,Selhurst Park,L. Smith,,,,
+1035426,2024-02-24T23:00:00+08:00,39,2023,Aston Villa,Nottingham Forest,4,2,Villa Park,S. Barrott,,,,
+1035424,2024-02-25T01:30:00+08:00,39,2023,Bournemouth,Manchester City,0,1,Vitality Stadium,J. Gillett,,,,
+1035425,2024-02-25T04:00:00+08:00,39,2023,Arsenal,Newcastle,4,1,Emirates Stadium,P. Tierney,,,,
+1035433,2024-02-25T21:30:00+08:00,39,2023,Wolves,Sheffield Utd,1,0,Molineux Stadium,D. Bond,,,,
+1035432,2024-02-27T04:00:00+08:00,39,2023,West Ham,Brentford,4,2,London Stadium,S. Hooper,,,,
+1035440,2024-03-02T23:00:00+08:00,39,2023,Newcastle,Wolves,3,0,St. James' Park,T. Robinson,,,,
+1035437,2024-03-02T23:00:00+08:00,39,2023,Fulham,Brighton,3,0,Craven Cottage,S. Hooper,,,,
+1035436,2024-03-02T23:00:00+08:00,39,2023,Everton,West Ham,1,3,Goodison Park,C. Pawson,,,,
+1035443,2024-03-02T23:00:00+08:00,39,2023,Tottenham,Crystal Palace,3,1,Tottenham Hotspur Stadium,J. Brooks,,,,
+1035434,2024-03-02T23:00:00+08:00,39,2023,Brentford,Chelsea,2,2,Gtech Community Stadium,J. Gillett,,,,
+1035441,2024-03-02T23:00:00+08:00,39,2023,Nottingham Forest,Liverpool,0,1,The City Ground,P. Tierney,,,,
+1035438,2024-03-03T01:30:00+08:00,39,2023,Luton,Aston Villa,2,3,Kenilworth Road,M. Oliver,,,,
+1035435,2024-03-03T21:00:00+08:00,39,2023,Burnley,Bournemouth,0,2,Turf Moor,D. Coote,,,,
+1035439,2024-03-03T23:30:00+08:00,39,2023,Manchester City,Manchester United,3,1,Etihad Stadium,A. Madley,,,,
+1035442,2024-03-05T04:00:00+08:00,39,2023,Sheffield Utd,Arsenal,0,6,Bramall Lane,S. Barrott,,,,
+1035451,2024-03-09T20:30:00+08:00,39,2023,Manchester United,Everton,2,0,Old Trafford,S. Hooper,,,,
+1035444,2024-03-09T23:00:00+08:00,39,2023,Bournemouth,Sheffield Utd,2,2,Vitality Stadium,A. Taylor,,,,
+1035453,2024-03-09T23:00:00+08:00,39,2023,Wolves,Fulham,2,1,Molineux Stadium,T. Harrington,,,,
+1035449,2024-03-09T23:00:00+08:00,39,2023,Crystal Palace,Luton,1,1,Selhurst Park,S. Singh,,,,
+1035445,2024-03-10T01:30:00+08:00,39,2023,Arsenal,Brentford,2,1,Emirates Stadium,R. Jones,,,,
+1035446,2024-03-10T21:00:00+08:00,39,2023,Aston Villa,Tottenham,0,4,Villa Park,C. Kavanagh,,,,
+1035452,2024-03-10T22:00:00+08:00,39,2023,West Ham,Burnley,2,2,London Stadium,D. England,,,,
+1035447,2024-03-10T22:00:00+08:00,39,2023,Brighton,Nottingham Forest,1,0,American Express Stadium,M. Salisbury,,,,
+1035450,2024-03-10T23:45:00+08:00,39,2023,Liverpool,Manchester City,1,1,Anfield,M. Oliver,,,,
+1035448,2024-03-12T04:00:00+08:00,39,2023,Chelsea,Newcastle,3,2,Stamford Bridge,J. Brooks,,,,
+1035334,2024-03-14T03:30:00+08:00,39,2023,Bournemouth,Luton,4,3,Vitality Stadium,S. Allison,,,,
+1035456,2024-03-16T23:00:00+08:00,39,2023,Burnley,Brentford,2,1,Turf Moor,D. Bond,6.0,0.61,5.0,0.39
+1035460,2024-03-16T23:00:00+08:00,39,2023,Luton,Nottingham Forest,1,1,Kenilworth Road,D. England,4.0,0.6,6.0,0.4
+1035459,2024-03-17T01:30:00+08:00,39,2023,Fulham,Tottenham,3,0,Craven Cottage,R. Jones,7.0,0.43,5.0,0.57
+1035462,2024-03-17T22:00:00+08:00,39,2023,West Ham,Aston Villa,1,1,London Stadium,J. Gillett,5.0,0.31,5.0,0.69
+1035470,2024-03-30T20:30:00+08:00,39,2023,Newcastle,West Ham,4,3,St. James' Park,R. Jones,9.0,0.6,4.0,0.4
+1035464,2024-03-30T23:00:00+08:00,39,2023,Bournemouth,Everton,2,1,Vitality Stadium,S. Barrott,4.0,0.49,3.0,0.51
+1035473,2024-03-30T23:00:00+08:00,39,2023,Tottenham,Luton,2,1,Tottenham Hotspur Stadium,J. Gillett,4.0,0.7,3.0,0.3
+1035467,2024-03-30T23:00:00+08:00,39,2023,Chelsea,Burnley,2,2,Stamford Bridge,D. England,13.0,0.69,7.0,0.31
+1035472,2024-03-30T23:00:00+08:00,39,2023,Sheffield Utd,Fulham,3,3,Bramall Lane,T. Robinson,4.0,0.26,9.0,0.74
+1035471,2024-03-30T23:00:00+08:00,39,2023,Nottingham Forest,Crystal Palace,1,1,The City Ground,C. Kavanagh,5.0,0.58,3.0,0.42
+1035465,2024-03-31T01:30:00+08:00,39,2023,Aston Villa,Wolves,2,0,Villa Park,P. Tierney,5.0,0.48,3.0,0.52
+1035466,2024-03-31T04:00:00+08:00,39,2023,Brentford,Manchester United,1,1,Gtech Community Stadium,S. Hooper,5.0,0.47,5.0,0.53
+1035468,2024-03-31T21:00:00+08:00,39,2023,Liverpool,Brighton,2,1,Anfield,D. Coote,8.0,0.54,3.0,0.46
+1035469,2024-03-31T23:30:00+08:00,39,2023,Manchester City,Arsenal,0,0,Etihad Stadium,A. Taylor,1.0,0.73,2.0,0.27
+1035481,2024-04-03T02:30:00+08:00,39,2023,Newcastle,Everton,1,1,St. James' Park,T. Harrington,6.0,0.58,3.0,0.42
+1035478,2024-04-03T02:30:00+08:00,39,2023,Nottingham Forest,Fulham,3,1,The City Ground,M. Oliver,4.0,0.33,3.0,0.67
+1035474,2024-04-03T02:45:00+08:00,39,2023,Bournemouth,Crystal Palace,1,0,Vitality Stadium,G. Scott,6.0,0.5,2.0,0.5
+1035477,2024-04-03T02:45:00+08:00,39,2023,Burnley,Wolves,1,1,Turf Moor,T. Bramall,6.0,0.51,2.0,0.49
+1035479,2024-04-03T03:15:00+08:00,39,2023,West Ham,Tottenham,1,1,London Stadium,J. Brooks,4.0,0.32,4.0,0.68
+1035475,2024-04-04T02:30:00+08:00,39,2023,Arsenal,Luton,2,0,Emirates Stadium,C. Pawson,4.0,0.58,1.0,0.42
+1035476,2024-04-04T02:30:00+08:00,39,2023,Brentford,Brighton,0,0,Gtech Community Stadium,A. Madley,,,,
+1035483,2024-04-04T03:15:00+08:00,39,2023,Manchester City,Aston Villa,4,1,Etihad Stadium,D. England,,,,
+1035482,2024-04-05T02:30:00+08:00,39,2023,Liverpool,Sheffield Utd,3,1,Anfield,S. Attwell,,,,
+1035480,2024-04-05T03:15:00+08:00,39,2023,Chelsea,Manchester United,4,3,Stamford Bridge,J. Gillett,,,,
+1035486,2024-04-06T19:30:00+08:00,39,2023,Crystal Palace,Manchester City,2,4,Selhurst Park,P. Tierney,,,,
+1035488,2024-04-06T22:00:00+08:00,39,2023,Fulham,Newcastle,0,1,Craven Cottage,S. Allison,,,,
+1035493,2024-04-06T22:00:00+08:00,39,2023,Wolves,West Ham,1,2,Molineux Stadium,T. Harrington,,,,
+1035487,2024-04-06T22:00:00+08:00,39,2023,Everton,Burnley,1,0,Goodison Park,M. Oliver,,,,
+1035484,2024-04-06T22:00:00+08:00,39,2023,Aston Villa,Brentford,3,3,Villa Park,M. Salisbury,,,,
+1035489,2024-04-06T22:00:00+08:00,39,2023,Luton,Bournemouth,2,1,Kenilworth Road,A. Madley,,,,
+1035485,2024-04-07T00:30:00+08:00,39,2023,Brighton,Arsenal,0,3,American Express Stadium,J. Brooks,,,,
+1035490,2024-04-07T22:30:00+08:00,39,2023,Manchester United,Liverpool,2,2,Old Trafford,A. Taylor,,,,
+1035491,2024-04-08T00:30:00+08:00,39,2023,Sheffield Utd,Chelsea,2,2,Bramall Lane,R. Jones,,,,
+1035492,2024-04-08T01:00:00+08:00,39,2023,Tottenham,Nottingham Forest,3,1,Tottenham Hotspur Stadium,S. Hooper,,,,
+1035501,2024-04-13T19:30:00+08:00,39,2023,Newcastle,Tottenham,4,0,St. James' Park,T. Robinson,,,,
+1035497,2024-04-13T22:00:00+08:00,39,2023,Burnley,Brighton,1,1,Turf Moor,S. Hooper,,,,
+1035500,2024-04-13T22:00:00+08:00,39,2023,Manchester City,Luton,5,1,Etihad Stadium,J. Brooks,,,,
+1035496,2024-04-13T22:00:00+08:00,39,2023,Brentford,Sheffield Utd,2,0,Gtech Community Stadium,S. Barrott,,,,
+1035502,2024-04-13T22:00:00+08:00,39,2023,Nottingham Forest,Wolves,2,2,The City Ground,C. Pawson,,,,
+1035494,2024-04-14T00:30:00+08:00,39,2023,Bournemouth,Manchester United,2,2,Vitality Stadium,T. Harrington,,,,
+1035499,2024-04-14T21:00:00+08:00,39,2023,Liverpool,Crystal Palace,0,1,Anfield,C. Kavanagh,,,,
+1035503,2024-04-14T21:00:00+08:00,39,2023,West Ham,Fulham,0,2,London Stadium,S. Attwell,4.0,0.58,10.0,0.42
+1035495,2024-04-14T23:30:00+08:00,39,2023,Arsenal,Aston Villa,0,2,Emirates Stadium,D. Coote,4.0,0.52,2.0,0.48
+1035498,2024-04-16T03:00:00+08:00,39,2023,Chelsea,Everton,6,0,Stamford Bridge,P. Tierney,10.0,0.59,2.0,0.41
+1035511,2024-04-20T22:00:00+08:00,39,2023,Sheffield Utd,Burnley,1,4,Bramall Lane,A. Madley,11.0,0.49,9.0,0.51
+1035509,2024-04-20T22:00:00+08:00,39,2023,Luton,Brentford,1,5,Kenilworth Road,J. Gillett,3.0,0.53,9.0,0.47
+1035513,2024-04-21T02:30:00+08:00,39,2023,Wolves,Arsenal,0,2,Molineux Stadium,P. Tierney,3.0,0.46,9.0,0.54
+1035507,2024-04-21T20:30:00+08:00,39,2023,Everton,Nottingham Forest,2,0,Goodison Park,A. Taylor,4.0,0.4,3.0,0.6
+1035506,2024-04-21T22:00:00+08:00,39,2023,Crystal Palace,West Ham,5,2,Selhurst Park,G. Scott,7.0,0.61,1.0,0.39
+1035504,2024-04-21T22:00:00+08:00,39,2023,Aston Villa,Bournemouth,3,1,Villa Park,T. Robinson,5.0,0.56,6.0,0.44
+1035508,2024-04-21T23:30:00+08:00,39,2023,Fulham,Liverpool,1,3,Craven Cottage,C. Pawson,5.0,0.4,7.0,0.6
+1035454,2024-04-24T03:00:00+08:00,39,2023,Arsenal,Chelsea,5,0,Emirates Stadium,S. Hooper,,,,
+1035463,2024-04-25T02:45:00+08:00,39,2023,Wolves,Bournemouth,0,1,Molineux Stadium,S. Attwell,,,,
+1035461,2024-04-25T03:00:00+08:00,39,2023,Manchester United,Sheffield Utd,4,2,Old Trafford,M. Salisbury,,,,
+1035458,2024-04-25T03:00:00+08:00,39,2023,Everton,Liverpool,2,0,Goodison Park,A. Madley,,,,
+1035457,2024-04-25T03:00:00+08:00,39,2023,Crystal Palace,Newcastle,2,0,Selhurst Park,T. Bramall,,,,
+1035455,2024-04-26T03:00:00+08:00,39,2023,Brighton,Manchester City,0,4,American Express Stadium,J. Gillett,,,,
+1035522,2024-04-27T19:30:00+08:00,39,2023,West Ham,Liverpool,2,2,London Stadium,A. Taylor,,,,
+1035518,2024-04-27T22:00:00+08:00,39,2023,Manchester United,Burnley,1,1,Old Trafford,J. Brooks,,,,
+1035519,2024-04-27T22:00:00+08:00,39,2023,Newcastle,Sheffield Utd,5,1,St. James' Park,T. Harrington,7.0,0.6,5.0,0.4
+1035517,2024-04-27T22:00:00+08:00,39,2023,Fulham,Crystal Palace,1,1,Craven Cottage,S. Attwell,2.0,0.54,4.0,0.46
+1035523,2024-04-27T22:00:00+08:00,39,2023,Wolves,Luton,2,1,Molineux Stadium,D. Coote,5.0,0.58,6.0,0.42
+1035516,2024-04-28T00:30:00+08:00,39,2023,Everton,Brentford,1,0,Goodison Park,D. England,1.0,0.48,4.0,0.52
+1035515,2024-04-28T03:00:00+08:00,39,2023,Aston Villa,Chelsea,2,2,Villa Park,C. Pawson,4.0,0.29,5.0,0.71
+1035514,2024-04-28T21:00:00+08:00,39,2023,Bournemouth,Brighton,3,0,Vitality Stadium,P. Tierney,6.0,0.3,1.0,0.7
+1035521,2024-04-28T21:00:00+08:00,39,2023,Tottenham,Arsenal,2,3,Tottenham Hotspur Stadium,M. Oliver,2.0,0.62,3.0,0.38
+1035520,2024-04-28T23:30:00+08:00,39,2023,Nottingham Forest,Manchester City,0,2,The City Ground,S. Hooper,2.0,0.33,5.0,0.67
+1035428,2024-05-03T02:30:00+08:00,39,2023,Chelsea,Tottenham,2,0,Stamford Bridge,R. Jones,5.0,0.37,3.0,0.63
+1035531,2024-05-04T03:00:00+08:00,39,2023,Luton,Everton,1,1,Kenilworth Road,T. Robinson,5.0,0.5,3.0,0.5
+1035524,2024-05-04T19:30:00+08:00,39,2023,Arsenal,Bournemouth,3,0,Emirates Stadium,D. Coote,9.0,0.55,2.0,0.45
+1035527,2024-05-04T22:00:00+08:00,39,2023,Burnley,Newcastle,1,4,Turf Moor,A. Taylor,5.0,0.47,11.0,0.53
+1035525,2024-05-04T22:00:00+08:00,39,2023,Brentford,Fulham,0,0,Gtech Community Stadium,G. Scott,3.0,0.54,3.0,0.46
+1035533,2024-05-04T22:00:00+08:00,39,2023,Sheffield Utd,Nottingham Forest,1,3,Bramall Lane,C. Kavanagh,5.0,0.54,4.0,0.46
+1035532,2024-05-05T00:30:00+08:00,39,2023,Manchester City,Wolves,5,1,Etihad Stadium,C. Pawson,12.0,0.58,1.0,0.42
+1035528,2024-05-05T21:00:00+08:00,39,2023,Chelsea,West Ham,5,0,Stamford Bridge,A. Madley,14.0,0.69,2.0,0.31
+1035526,2024-05-05T21:00:00+08:00,39,2023,Brighton,Aston Villa,1,0,American Express Stadium,R. Jones,8.0,0.53,1.0,0.47
+1035530,2024-05-05T23:30:00+08:00,39,2023,Liverpool,Tottenham,4,2,Anfield,P. Tierney,13.0,0.44,6.0,0.56
+1035529,2024-05-07T03:00:00+08:00,39,2023,Crystal Palace,Manchester United,4,0,Selhurst Park,J. Gillett,10.0,0.43,2.0,0.57
+1035537,2024-05-11T19:30:00+08:00,39,2023,Fulham,Manchester City,0,4,Craven Cottage,A. Taylor,1.0,0.36,9.0,0.64
+1035539,2024-05-11T22:00:00+08:00,39,2023,Newcastle,Brighton,1,1,St. James' Park,D. England,7.0,0.56,4.0,0.44
+1035534,2024-05-11T22:00:00+08:00,39,2023,Bournemouth,Brentford,1,2,Vitality Stadium,M. Donohue,,,,
+1035543,2024-05-11T22:00:00+08:00,39,2023,Wolves,Crystal Palace,1,3,Molineux Stadium,T. Bramall,,,,
+1035536,2024-05-11T22:00:00+08:00,39,2023,Everton,Sheffield Utd,1,0,Goodison Park,S. Attwell,,,,
+1035541,2024-05-11T22:00:00+08:00,39,2023,Tottenham,Burnley,2,1,Tottenham Hotspur Stadium,J. Gillett,,,,
+1035542,2024-05-11T22:00:00+08:00,39,2023,West Ham,Luton,3,1,London Stadium,M. Oliver,,,,
+1035540,2024-05-12T00:30:00+08:00,39,2023,Nottingham Forest,Chelsea,2,3,The City Ground,T. Harrington,,,,
+1035538,2024-05-12T23:30:00+08:00,39,2023,Manchester United,Arsenal,0,1,Old Trafford,P. Tierney,,,,
+1035535,2024-05-14T03:00:00+08:00,39,2023,Aston Villa,Liverpool,3,3,Villa Park,S. Hooper,,,,
+1035512,2024-05-15T03:00:00+08:00,39,2023,Tottenham,Manchester City,0,2,Tottenham Hotspur Stadium,C. Kavanagh,,,,
+1035505,2024-05-16T02:45:00+08:00,39,2023,Brighton,Chelsea,1,2,American Express Stadium,M. Salisbury,,,,
+1035510,2024-05-16T03:00:00+08:00,39,2023,Manchester United,Newcastle,3,2,Old Trafford,R. Jones,,,,
+1035550,2024-05-19T23:00:00+08:00,39,2023,Liverpool,Wolves,2,0,Anfield,C. Kavanagh,,,,
+1035544,2024-05-19T23:00:00+08:00,39,2023,Arsenal,Everton,2,1,Emirates Stadium,M. Oliver,,,,
+1035547,2024-05-19T23:00:00+08:00,39,2023,Burnley,Nottingham Forest,1,2,Turf Moor,G. Scott,,,,
+1035548,2024-05-19T23:00:00+08:00,39,2023,Chelsea,Bournemouth,2,1,Stamford Bridge,A. Taylor,,,,
+1035552,2024-05-19T23:00:00+08:00,39,2023,Manchester City,West Ham,3,1,Etihad Stadium,J. Brooks,,,,
+1035546,2024-05-19T23:00:00+08:00,39,2023,Brighton,Manchester United,0,2,American Express Stadium,C. Pawson,,,,
+1035549,2024-05-19T23:00:00+08:00,39,2023,Crystal Palace,Aston Villa,5,0,Selhurst Park,D. Bond,,,,
+1035545,2024-05-19T23:00:00+08:00,39,2023,Brentford,Newcastle,2,4,Gtech Community Stadium,S. Hooper,,,,
+1035553,2024-05-19T23:00:00+08:00,39,2023,Sheffield Utd,Tottenham,0,3,Bramall Lane,A. Madley,,,,
+1035551,2024-05-19T23:00:00+08:00,39,2023,Luton,Fulham,2,4,Kenilworth Road,M. Donohue,,,,

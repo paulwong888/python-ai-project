@@ -1,0 +1,168 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1035456"
+    },
+    "errors": [],
+    "results": 2,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 44,
+                "name": "Burnley",
+                "logo": "https://media.api-sports.io/football/teams/44.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 6
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 5
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 17
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 6
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 10
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 7
+                },
+                {
+                    "type": "Fouls",
+                    "value": 14
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 5
+                },
+                {
+                    "type": "Offsides",
+                    "value": 5
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "61%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 2
+                },
+                {
+                    "type": "Red Cards",
+                    "value": 0
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 5
+                },
+                {
+                    "type": "Total passes",
+                    "value": 457
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 366
+                },
+                {
+                    "type": "Passes %",
+                    "value": "80%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "2.77"
+                }
+            ]
+        },
+        {
+            "team": {
+                "id": 55,
+                "name": "Brentford",
+                "logo": "https://media.api-sports.io/football/teams/55.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 5
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 1
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 9
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 3
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 8
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 1
+                },
+                {
+                    "type": "Fouls",
+                    "value": 17
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 4
+                },
+                {
+                    "type": "Offsides",
+                    "value": 3
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "39%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 4
+                },
+                {
+                    "type": "Red Cards",
+                    "value": 1
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 4
+                },
+                {
+                    "type": "Total passes",
+                    "value": 292
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 185
+                },
+                {
+                    "type": "Passes %",
+                    "value": "63%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "1.16"
+                }
+            ]
+        }
+    ]
+}

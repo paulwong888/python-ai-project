@@ -1,0 +1,168 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1035511"
+    },
+    "errors": [],
+    "results": 2,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 62,
+                "name": "Sheffield Utd",
+                "logo": "https://media.api-sports.io/football/teams/62.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 11
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 4
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 18
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 3
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 14
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 4
+                },
+                {
+                    "type": "Fouls",
+                    "value": 10
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 11
+                },
+                {
+                    "type": "Offsides",
+                    "value": 2
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "49%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 1
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 5
+                },
+                {
+                    "type": "Total passes",
+                    "value": 461
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 360
+                },
+                {
+                    "type": "Passes %",
+                    "value": "78%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "2.43"
+                }
+            ]
+        },
+        {
+            "team": {
+                "id": 44,
+                "name": "Burnley",
+                "logo": "https://media.api-sports.io/football/teams/44.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 9
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 5
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 16
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 2
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 14
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 2
+                },
+                {
+                    "type": "Fouls",
+                    "value": 9
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 2
+                },
+                {
+                    "type": "Offsides",
+                    "value": 1
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "51%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 0
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 10
+                },
+                {
+                    "type": "Total passes",
+                    "value": 503
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 416
+                },
+                {
+                    "type": "Passes %",
+                    "value": "83%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "2.18"
+                }
+            ]
+        }
+    ]
+}

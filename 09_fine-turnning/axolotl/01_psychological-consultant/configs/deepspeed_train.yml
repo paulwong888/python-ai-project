@@ -1,0 +1,102 @@
+# model params
+# base_model: /home/paul/.cache/huggingface/models/unsloth--Meta-Llama-3.1-8B
+# base_model: /home/paul/.cache/huggingface/models/models--Qwen--Qwen2.5-1.5B-Instruct
+base_model: /home/paul/.cache/huggingface/hub/models--Qwen--Qwen2-0.5B
+# model_type: LlamaForCausalLM
+# tokenizer_type: PreTrainedTokenizerFast
+
+# dataset params
+datasets:
+  - path: /home/paul/.cache/huggingface/hub/datasets--Kedreamix--psychology-10k-Deepseek-R1-zh
+  # - path: jaydenccc/AI_Storyteller_Dataset
+    type:
+      system_prompt: |-
+        Below is an instruction that describes a task, paired with an input that provides further context. 
+        Write a response that appropriately completes the request. 
+        Before answering, think carefully about the question and create a step-by-step chain of thoughts to ensure a logical and accurate response.
+        You are a medical expert with advanced knowledge in clinical reasoning, diagnostics, and treatment planning. 
+      field_system: system
+      field_instruction: input
+      field_input: reasoning_content
+      field_output: content
+      format: |-
+        ### Instruction:
+        Please answer the following medical question. 
+
+        ### Question:
+        {instruction}
+
+        ### Response:
+        <think>
+        {input}
+        </think>
+      # no_input_format: 
+# fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa.incomplete
+output_dir: ./models/Llama3_Storyteller_deepspeed
+
+# model params
+sequence_length: 1024
+pad_to_sequence_len: true
+special_tokens:
+  pad_token: <|end_of_text|>
+
+bf16: auto
+bf32: false
+
+# training params
+# batch_size: 16
+micro_batch_size: 2
+num_epochs: 4
+optimize: adamw_bnb_8bit
+learning_rate: 0.001
+
+logging_steps: 1
+
+# LoRA
+adapter: qlora
+
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - v_proj
+#  - k_proj
+#  - o_proj
+  - gate_proj
+#  - down_proj
+#  - up_proj
+lora_modules_to_save:
+  - embed_tokens
+  - lm_head
+
+lora_target_linear: true
+
+# Gradient Accumulation
+gradient_accumulation_steps: 1
+
+# Gradient Checkpointing
+gradient_checkpointing: true
+
+# Low Precision
+load_in_8bit: false
+load_in_4bit: true
+
+train_on_inputs: false
+
+val_set_size: 0.1
+eval_strategy: steps # Set to `"no"` to skip evaluation, `"epoch"` at end of each epoch, leave empty to infer from `eval_steps`.
+eval_steps: 10 # Leave empty to eval at each epoch, integer for every N steps. float for fraction of total steps
+evals_per_epoch: # number of times per epoch to run evals, mutually exclusive with eval_steps
+save_strategy: steps # Set to `"no"` to skip checkpoint saves, `"epoch"` at end of each epoch, `"best"` when better result is achieved, leave empty to infer from `save_steps`.
+save_steps: 10 # Leave empty to save at each epoch, integer for every N steps. float for fraction of total steps
+saves_per_epoch: # number of times per epoch to save a checkpoint, mutually exclusive with save_steps
+save_total_limit: 
+
+special_tokens:
+  eos_token: "<|im_end|>"
+
+prompt_template: |
+  {{ instruction }}{% if input %}\n{{ input }}{% endif %}
+  Let's think step by step: {{ think }}
+  Final Answer: {{ output }}

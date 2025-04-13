@@ -1,0 +1,168 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1035521"
+    },
+    "errors": [],
+    "results": 2,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 47,
+                "name": "Tottenham",
+                "logo": "https://media.api-sports.io/football/teams/47.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 2
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 7
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 15
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 6
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 10
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 5
+                },
+                {
+                    "type": "Fouls",
+                    "value": 12
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 8
+                },
+                {
+                    "type": "Offsides",
+                    "value": 3
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "62%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 2
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 1
+                },
+                {
+                    "type": "Total passes",
+                    "value": 564
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 505
+                },
+                {
+                    "type": "Passes %",
+                    "value": "90%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "2.42"
+                }
+            ]
+        },
+        {
+            "team": {
+                "id": 42,
+                "name": "Arsenal",
+                "logo": "https://media.api-sports.io/football/teams/42.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 3
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 1
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 9
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 5
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 8
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 1
+                },
+                {
+                    "type": "Fouls",
+                    "value": 16
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 6
+                },
+                {
+                    "type": "Offsides",
+                    "value": 4
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "38%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 1
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 0
+                },
+                {
+                    "type": "Total passes",
+                    "value": 344
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 280
+                },
+                {
+                    "type": "Passes %",
+                    "value": "81%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "1.03"
+                }
+            ]
+        }
+    ]
+}
