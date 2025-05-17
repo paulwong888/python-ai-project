@@ -5,3 +5,6 @@ xgboost
 requests
 python-dotenv
 cupy-cuda12x
+requests 
+beautifulsoup4 
+sqlalchemy
